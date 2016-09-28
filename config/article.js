@@ -14,18 +14,17 @@ export default () => ({ // eslint-disable-line
   headline: 'Where is Britain headed?',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: 'Political language is designed to make lies sound truthful' +
-           'and murder respectable, and to give an appearance of solidity to pure wind',
+  summary: '',
 
   // topic: {
   //   name: 'Starter Kit',
   //   url: '/foo',
   // },
 
-  relatedArticle: {
-    text: 'Read more »',
-    url: 'https://en.wikipedia.org/wiki/Politics_and_the_English_Language',
-  },
+  // relatedArticle: {
+  //   text: 'Read more »',
+  //   url: 'https://en.wikipedia.org/wiki/Politics_and_the_English_Language',
+  // },
 
   mainImage: {
     title: '',

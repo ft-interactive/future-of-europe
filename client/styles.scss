@@ -14,7 +14,7 @@
                 - index.js
                 - template.html
 */
-body, .o-header__row {
+body, .o-header__row, main {
   background-color: #191933;
   text-align: center;
 }
@@ -30,6 +30,10 @@ h1.o-typography-heading1 {
 div.pitch, div.article-body > p, p.o-typography-lead {
   color: #ECECEF;
 }
+
+// div.pitch-wrapper {
+//   display: none;
+// }
 
 div.pitch {
   height: 20vh;
@@ -60,6 +64,7 @@ div.like-button {
   height: 38px;
   border-radius: 4px;
 }
+
 
 div.tweet-icon {
   height:38px;

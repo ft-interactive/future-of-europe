@@ -1,37 +1,40 @@
 {% extends "layout.html" %}
 
+
+{% macro PitchRandomizer(submission) %}
+<div class="pitch-wrapper">
+  <div class="pitch">{{ submission.pitch }}</div>
+  <div class="expand-button">Read more</div>
+  <div class="like-button">Like</div>
+  {% if flags.shareButtons %}
+    {% include "includes/share.html" %}
+  {% endif %}
+
+  <div class="tweet-button">
+    <a href="https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/&amp;text=Where%20is%20Britain%20headed%3F&amp;related=%40ft&amp;via=FT">
+      <div class="tweet-icon"></div>
+      <div class="tweet-text">Tweet this pitch</div>
+    </a>
+  </div>
+  <div class="submit-button">or add your own</div>
+</div>
+{% endmacro %}
+
 {% block article_body %}
-{% markdown %}
-<div class="pitch">"Political language is designed to make lies sound truthful and murder respectable, and to give an appearance of solidity to pure wind"</div>
+
+<!-- <div class="pitch">"Political language is designed to make lies sound truthful and murder respectable, and to give an appearance of solidity to pure wind"</div>
 <div class="expand-button">Read more</div>
 <div class="like-button">Like</div>
 {% if flags.shareButtons %}
   {% include "includes/share.html" %}
-{% endif %}
-  <div class="tweet-button">
-    <a href="https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/&amp;text=Where%20is%20Britain%20headed%3F&amp;related=%40ft&amp;via=FT">
-    <div class="tweet-icon"></div>
-    <div class="tweet-text">Tweet this pitch</div>
-    </a>
+{% endif %} -->
+
+<div data-pitch-count="{{ pitches.length }}">
+{% for pitch in pitches %}
+  <div data-index="{{ loop.index0 }}">
+  {{ PitchRandomizer(pitch) }}
   </div>
-<div class="submit-button">or add your own<div>
+{% endfor %}
+</div>
 
-<!-- <figure class="graphic graphic-b-1 graphic-pad-1">
-  <img alt="" src="https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2Fc4bf0be4-7c15-11e4-a7b8-00144feabdc0?source=ig&fit=scale-down&width=700"></img>
-    <figcaption class="o-typography-caption">
-    <a class="o-typography-link" href="#void">&#xA9;Credit person</a> George Orwell at his typewriter
-  </figcaption>
-</figure>
-
-To begin with it has nothing to do with archaism, with the salvaging of
-obsolete words and turns of speech, or with the setting up of a "standard
-English" which must never be departed from. On the contrary, it is
-especially concerned with the scrapping of every word or idiom which has
-outworn its usefulness. It has nothing to do with correct grammar and syntax,
-which are of no importance so long as one makes one's meaning clear, or with
-the avoidance of Americanisms, or with having what is called a "good prose
-style." On the other hand, it is not concerned with fake simplicity and
-the attempt to make written English colloquial.
-
-{% endmarkdown %}
-{% endblock %} -->
+{% endblock %}

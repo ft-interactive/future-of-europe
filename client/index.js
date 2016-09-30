@@ -1,19 +1,12 @@
-/*
-  TODO: delete this comment
+function randomPitch() {
+  // find all the pitches
+  // pick a random one// show it
+  // hide all the rest
 
-  This file is where you bootstrap your JS code
-  For example import stuff here:
+  const random = Math.random() * 100 / 17
+  document.querySelectorAll('[data-index="'+ random +'"]')
+}
 
-  import {select} from 'd3-selection';
-  import myComponent from './components/my-component';
+myButton.onclick = randomPitch;
 
-  Split logical parts of you project into components e.g.
-
-  /client
-    - /components
-        - /component-name
-            - styles.scss
-            - index.js
-            - template.html
-
-*/
+randomPitch()

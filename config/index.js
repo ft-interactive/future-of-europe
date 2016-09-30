@@ -1,10 +1,13 @@
 import article from './article';
 import getFlags from './flags';
+import pitches from './fob';
 import getOnwardJourney from './onward-journey';
 
 export default async function() {
   const d = await article();
   const flags = await getFlags();
+
+  console.log(pitches);
   const onwardJourney = await getOnwardJourney();
   /*
   An experimental demo that gets content from the API
@@ -31,6 +34,7 @@ export default async function() {
   return {
     ...d,
     flags,
+    pitches,
     onwardJourney,
   };
 }

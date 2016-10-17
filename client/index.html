@@ -1,6 +1,5 @@
 {% extends "layout.html" %}
 
-
 {% macro PitchRandomizer(submission) %}
 <div class="pitch-wrapper">
   <div class="pitch">{{ submission.pitch }}</div>
@@ -21,7 +20,6 @@
 {% endmacro %}
 
 {% block article_body %}
-
 <!-- <div class="pitch">"Political language is designed to make lies sound truthful and murder respectable, and to give an appearance of solidity to pure wind"</div>
 <div class="expand-button">Read more</div>
 <div class="like-button">Like</div>
@@ -30,11 +28,12 @@
 {% endif %} -->
 
 <div data-pitch-count="{{ pitches.length }}">
-{% for pitch in pitches %}
-  <div data-index="{{ loop.index0 }}">
-  {{ PitchRandomizer(pitch) }}
+  {% for pitch in pitches %}
+  <div data-index="{{ loop.index0 }}" class="hidden">
+    {{ PitchRandomizer(pitch) }}
   </div>
-{% endfor %}
+  {% endfor %}
 </div>
 
+<button class="random-button">Show Me Another</button>
 {% endblock %}

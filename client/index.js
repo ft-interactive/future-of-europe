@@ -26,7 +26,7 @@ function showRandom() {
 
   if (randomIndex === currentIndex) {
     // console.log('Duplicate index returned, re-randomising');
-    randomIndex = getRandomIndex(0, pitchCount - 1);
+    randomIndex = getRandomIndex(0, pitchCount);
     // console.log(randomIndex);
   }
 
@@ -40,9 +40,9 @@ const randomButton = document.querySelector('.random-button');
 randomButton.addEventListener('click', () => {
   const previousDiv = document.querySelector(`div[data-index="${currentIndex}"]`);
 
-  showRandom();
-
   previousDiv.style = '';
+
+  showRandom();
 });
 
 // On load

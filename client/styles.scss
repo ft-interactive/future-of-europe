@@ -14,6 +14,13 @@
                 - index.js
                 - template.html
 */
+body 
+{background:url('Future of Britain illo__generator.svg')  #191933;
+  background-size:cover;
+  background-position: center;
+  width:100%;
+}
+
 html {
     -webkit-font-smoothing: antialiased;
 }
@@ -95,7 +102,6 @@ html {
 
 
 body, .o-header__row, main {
-  background-color: #191933;
   text-align: center;
 }
 

@@ -4,10 +4,15 @@
 <div class="pitch-wrapper">
   <div class="pitch">{{ submission.pitch }}</div>
   <div class="expand-button">Read more</div>
+<<<<<<< HEAD
+=======
   <div class="like-button">I like this idea</div>
+>>>>>>> master
   {% if flags.shareButtons %}
     {% include "includes/share.html" %}
   {% endif %}
+
+  <button class="like-button" value="{{ submission.id }}">Add to Favourites</button>
 
   <div class="tweet-button">
     <a href="https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/&amp;text=Where%20is%20Britain%20headed%3F&amp;related=%40ft&amp;via=FT">
@@ -29,12 +34,21 @@
 
 <div data-pitch-count="{{ pitches.length }}">
   {% for pitch in pitches %}
-  <div data-index="{{ loop.index0 }}" class="hidden">
+  <div data-index="{{ pitch.id }}" class="hidden">
     {{ PitchRandomizer(pitch) }}
   </div>
   {% endfor %}
 </div>
 
+<<<<<<< HEAD
+<button class="random-button" id="random-button">Show Me Another</button>
+
+<p>
+  No. of favourites: <span id="favourites-counter"></span>
+</p>
+
+<button id="view-all-favourites">View All Favourites</button>
+=======
 
 <button class="random-button">Show Me Another</button>
 <div class="read-more"><a href="#">Read more about the project</a></div>
@@ -43,4 +57,5 @@
 
 
 
+>>>>>>> master
 {% endblock %}

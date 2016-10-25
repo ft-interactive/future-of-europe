@@ -1,70 +1,121 @@
 const pitchCount = parseInt(document.querySelector('div[data-pitch-count]').dataset.pitchCount, 10);
-let currentIndex = {};
-const randomButton = document.querySelector('.random-button');
-const hashNumber = location.hash.slice(1);
+const viewed = [];
+const likeButtons = document.querySelectorAll('.like-button');
+const randomButton = document.querySelector('#random-button');
+const favourites = [];
+const favouritesCounter = document.querySelector('#favourites-counter');
+const hash = location.hash.slice(1);
+const viewAllButton = document.querySelector('#view-all-favourites');
 
-function showEntry(index) {
+function showEntries(array) {
+  const hashString = array.join('-');
+
   // Display div index
-  const div = document.querySelector(`div[data-index="${index}"]`);
+  array.forEach(n => {
+    const div = document.querySelector(`div[data-index="${n}"]`);
 
-  div.style.display = 'block';
-  div.classList.add('viewed');
+    div.style.display = 'block';
+    div.classList.add('viewed');
+  });
 
   // Change the address bar
   if (history.replaceState) {
-    history.replaceState(null, null, `#${index}`);
+    history.replaceState(null, null, `#${hashString}`);
   } else {
-    location.hash = `#${index}`;
+    location.hash = `#${hashString}`;
+  }
+
+  // Change the random button on the last pitch
+  if (viewed.length === pitchCount) {
+    const submitOwnButton = randomButton.cloneNode(true);
+
+    randomButton.parentNode.replaceChild(submitOwnButton, randomButton);
+
+    submitOwnButton.innerHTML = 'Submit Your Own';
+
+    submitOwnButton.classList.remove('random-button');
+
+    submitOwnButton.classList.add('submit-button');
+
+    submitOwnButton.addEventListener('click', () => {
+      window.location.href = 'https://ig.ft.com/sites/future-of-britain-form/';
+    });
   }
 }
 
 function getRandomIndex(min, max) {
-  return Math.floor((Math.random() * (max - min)) + min);
+  return Math.floor(Math.random() * ((max - min) + 1)) + min;
 }
 
 function showRandom() {
-  let randomIndex = getRandomIndex(0, pitchCount);
-  const div = document.querySelector(`div[data-index="${randomIndex}"]`);
+  const array = [];
 
-  if (div.classList.contains('viewed')) {
-    randomIndex = getRandomIndex(0, pitchCount);
+  viewed.forEach(n => {
+    const div = document.querySelector(`div[data-index="${n}"]`);
 
-    showRandom();
-  } else {
-    showEntry(randomIndex);
+    div.style = '';
+  });
 
-    currentIndex = randomIndex;
-  }
+  array.push(getRandomIndex(1, pitchCount));
+
+  array.forEach(n => {
+    if (viewed.indexOf(n) > -1) {
+      console.log('Duplicate, re-randomising');
+
+      showRandom();
+    } else {
+      viewed.push(n);
+
+      showEntries(array);
+
+      console.log(viewed);
+      console.log(viewed.length);
+    }
+  });
 }
 
 randomButton.addEventListener('click', () => {
-  const previousDiv = document.querySelector(`div[data-index="${currentIndex}"]`);
-  let viewedPitchCount = {};
-
   showRandom();
+});
 
-  previousDiv.style = '';
+likeButtons.forEach(likeButton => {
+  likeButton.addEventListener('click', () => {
+    const button = likeButton;
 
-  viewedPitchCount = document.querySelectorAll('.viewed').length;
+    button.disabled = true;
 
-  if (viewedPitchCount === pitchCount) {
-    randomButton.innerHTML = 'Submit Your Own';
+    favourites.push(parseInt(button.value, 10));
 
-    randomButton.classList.add('submit-button');
+    favouritesCounter.innerHTML = favourites.length;
+  });
+});
 
-    randomButton.classList.remove('random-button');
+viewAllButton.addEventListener('click', () => {
+  viewed.forEach(n => {
+    const div = document.querySelector(`div[data-index="${n}"]`);
+    div.style = '';
+  });
 
-    randomButton.addEventListener('click', () => {
-      window.location.href = 'https://ig.ft.com/sites/future-of-britain-form/';
-    });
-  }
+  showEntries(favourites);
 });
 
 // On load
-if (hashNumber && !Number.isNaN(hashNumber)) {
-  showEntry(hashNumber);
+if (hash) {
+  const hashArray = hash.split('-');
+  const hashNumbers = [];
 
-  currentIndex = hashNumber;
+  hashArray.forEach(item => {
+    const int = parseInt(item, 10);
+
+    if (Number.isInteger(int)) {
+      hashNumbers.push(int);
+      viewed.push(int);
+    } else {
+      console.log(`${item} is not a number`);
+    }
+  });
+
+  showEntries(hashNumbers);
 } else {
   showRandom();
 }

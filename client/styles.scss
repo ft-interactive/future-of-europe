@@ -14,9 +14,96 @@
                 - index.js
                 - template.html
 */
+body 
+ {
+  background:#191a32;
+
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    background:#191a32;
+}
+
+.o-header.o-header--minimal {
+    display: block;
+    height:auto;
+    background-color: transparent;
+}
+
+.o-header {
+    color: #fff;
+    z-index: 1;
+    padding-bottom: 0;
+    top: 0;
+    position: relative !important;
+}
+
+.o-header__container{
+    border-bottom: 1px solid rgba(255,255,255, 0.3);
+    position: relative;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 240px;
+    max-width: 1220px;
+}
+
+.o-header__inner{
+    clear: both;
+    flex-wrap: wrap;
+    display: flex;
+    zoom: 1;
+}
+
+
+.o-header__visually-hidden{
+  display: none;
+}
+
+.o-header__bottom{
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    flex: 1 1 0%;
+    display: block;
+    flex-basis: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+
+}
+
+.o-header__top-logo{    
+    margin: 10px auto;
+    padding: 3px 3px;
+    position: relative;
+    width: 176px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    vertical-align: baseline;
+    display: block;
+    background-image: url(https://image.webservices.ft.com/v1/images/raw/fticon:brand-ft-masthead?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg);
+    opacity: 0.7;
+    >span{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    border: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    }
+}
+
+
+
 body, .o-header__row, main {
-  background-color: #191933;
   text-align: center;
+  
 }
 
 body {
@@ -24,86 +111,218 @@ body {
 }
 
 h1.o-typography-heading1 {
-  color: #E02F28;
+  color: #EB3330;
+  font-size: 31px;
+  line-height: 31px;
+  margin: 9px auto 0;
+
 }
 
 div.pitch, div.article-body > p, p.o-typography-lead {
   color: #ECECEF;
+
 }
 
-// div.pitch-wrapper {
-//   display: none;
-// }
+div.pitch-wrapper {
+position: relative;
+display:block;
+
+}
 
 div.pitch {
+  position: relative;
   height: 20vh;
-  font-size: 30px;
+  font-size: 28px;
+  line-height: 30px;
 }
 
 .expand-button {
+  display: block;
+  position: relative;
+  margin-top: 30%;
   color: #808088;
   border: none;
 }
 
-div.like-button {
-  color: #ECECEF;
-  border: 1px solid #E02F28;
+.tweet-button, .like-button, .random-button {
+  margin: 0 auto;
+  width: 220px;
+  height: 40px;
   border-radius: 4px;
-  width: 50px;
-  //float: right;
-}
-
-.article-body .random-button {
-  color: #ECECEF;
-  border: 1px solid #E02F28;
-  border-radius: 4px;
-  width: auto;
-  background-color: transparent;
-  padding: 10px;
-}
-
-.tweet-button, .submit-button, div.tweet-button > a {
+  font-size: 22px;
+  font-weight: 600;
   color: #ECECEF;
 }
 
-.tweet-button {
-  background-color: #E02F28;
-  width: 140px;
-  height: 38px;
-  border-radius: 4px;
+
+.like-button {
+border: 1px solid #EB3330;
+line-height: 40px;
+float: left;
 }
 
+.article-body > :not(.graphic){
+  margin: 0 auto;
+}
 
-div.tweet-icon {
-  height:38px;
-  width: 38px;
+.random-button{
   margin: 0;
-  display:inline-block;
-  float: left;
-  background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMTMgLTEwMyA0MCA0MCI+PHBhdGggZmlsbD0iI2E3YTU5YiIgZD0iTS04MS44NjItODkuNzg2Yy0uODIuMzU3LTEuNy42LTIuNjI0LjcwOC45NDMtLjU1NiAxLjY2OC0xLjQzNiAyLjAxLTIuNDgzLS44ODMuNTEtMS44NjIuODgtMi45MDIgMS4wOC0uODMzLS44Ny0yLjAyLTEuNDItMy4zMzctMS40Mi0yLjUyMyAwLTQuNTcgMi4wMS00LjU3IDQuNDkgMCAuMzUuMDQuNjkuMTE4IDEuMDItMy44LS4xOS03LjE2Ny0xLjk3OC05LjQyLTQuNjktLjM5NC42Ni0uNjIgMS40My0uNjIgMi4yNiAwIDEuNTUuODA3IDIuOTMgMi4wMzMgMy43My0uNzUtLjAyNS0xLjQ1NC0uMjI4LTIuMDctLjU2di4wNTRjMCAyLjE3NiAxLjU3MyAzLjk5IDMuNjY3IDQuNC0uMzg0LjEwNC0uNzkuMTYtMS4yMDQuMTYtLjMgMC0uNTgtLjAyNy0uODYtLjA4LjU4IDEuNzgyIDIuMjcgMy4wOCA0LjI3IDMuMTE2LTEuNTcgMS4yMDUtMy41NCAxLjkyMy01LjY4IDEuOTIzLS4zNyAwLS43NC0uMDI2LTEuMDktLjA2NyAyLjAyIDEuMjcyIDQuNDIgMi4wMTUgNyAyLjAxNSA4LjQgMCAxMy02Ljg0IDEzLTEyLjc3IDAtLjE5NC0uMDA3LS4zOS0uMDE4LS41OC44OS0uNjMzIDEuNjY1LTEuNDI1IDIuMjgtMi4zMjV6Ii8+PC9zdmc+)
+  background:#EB3330;
+  border:none;
 }
+
+.like-button::before {
+  content:"";
+  background-image:url(like_btn.svg);
+  background-repeat: no-repeat;
+  display:block;
+  position:absolute;
+  width:25px;
+  height:25px;
+  margin: 8px;
+}
+
+
+.submit-button{
+  position: relative;
+  width: 100%;
+  color: #ECECEF;
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 10px 0;
+  text-align: center;
+  
+}
+
+.submit-button:after{
+  content:"";
+  display: block;
+  background: rgba(255,255,255,0.9);
+  //border-bottom: 1px solid white;
+  width: 100%;
+  height:1px;
+  color: #ECECEF;
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+.tweet-button,.tweet-button > a {
+  background-color: #4099FF;
+  color: #ECECEF;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.tweet-button::before {
+  content:"";
+  background-image:url(twitterBird.svg);
+  display:block;
+  position:absolute;
+  width:30px;
+  height:30px;
+  margin:5px;
+}
+
+
+
+// div.tweet-icon {
+//   height:38px;
+//   width: 38px;
+//   margin: 0;
+//   display:inline-block;
+//   float: left;
+//   background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMTMgLTEwMyA0MCA0MCI+PHBhdGggZmlsbD0iI2E3YTU5YiIgZD0iTS04MS44NjItODkuNzg2Yy0uODIuMzU3LTEuNy42LTIuNjI0LjcwOC45NDMtLjU1NiAxLjY2OC0xLjQzNiAyLjAxLTIuNDgzLS44ODMuNTEtMS44NjIuODgtMi45MDIgMS4wOC0uODMzLS44Ny0yLjAyLTEuNDItMy4zMzctMS40Mi0yLjUyMyAwLTQuNTcgMi4wMS00LjU3IDQuNDkgMCAuMzUuMDQuNjkuMTE4IDEuMDItMy44LS4xOS03LjE2Ny0xLjk3OC05LjQyLTQuNjktLjM5NC42Ni0uNjIgMS40My0uNjIgMi4yNiAwIDEuNTUuODA3IDIuOTMgMi4wMzMgMy43My0uNzUtLjAyNS0xLjQ1NC0uMjI4LTIuMDctLjU2di4wNTRjMCAyLjE3NiAxLjU3MyAzLjk5IDMuNjY3IDQuNC0uMzg0LjEwNC0uNzkuMTYtMS4yMDQuMTYtLjMgMC0uNTgtLjAyNy0uODYtLjA4LjU4IDEuNzgyIDIuMjcgMy4wOCA0LjI3IDMuMTE2LTEuNTcgMS4yMDUtMy41NCAxLjkyMy01LjY4IDEuOTIzLS4zNyAwLS43NC0uMDI2LTEuMDktLjA2NyAyLjAyIDEuMjcyIDQuNDIgMi4wMTUgNyAyLjAxNSA4LjQgMCAxMy02Ljg0IDEzLTEyLjc3IDAtLjE5NC0uMDA3LS4zOS0uMDE4LS41OC44OS0uNjMzIDEuNjY1LTEuNDI1IDIuMjgtMi4zMjV6Ii8+PC9zdmc+)
+// }
 
 div.tweet-text {
-  padding-top: 10px;
+text-align: center;
+padding: 9px;
 }
 
-.submit-button {
-    text-decoration: none;
-    position: relative;
-    padding-bottom: 3px;
-}
-.submit-button:after {
-    content: '';
 
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -3px;
 
-    border-width: 0 0 1px;
-    border-style: solid;
-}
 
 div.hidden {
   display: none;
 }
+
+@media only screen and (min-width: 740px) {
+
+  body 
+{background:url('Future of Britain illo__generator.svg')  #191a32;
+  background-size:cover;
+  background-position: center;
+  width:100%;
+}
+
+  .o-header__top-logo{    
+    margin: 10px auto;
+    padding: 6px 6px;
+    position: relative;
+    width: 262px;
+    height: 22px;
+}
+
+  h1.o-typography-heading1 {
+  font-size: 59px;
+  line-height: 59px;
+  }
+
+  div.pitch {
+  font-size: 35px;
+  line-height: 35px;
+}
+
+
+}
+
+@media only screen and (min-width: 980px) {
+
+  div.pitch {
+  font-size: 42px;
+  line-height: 44px;
+}
+
+.o-typography-body-wrapper a {
+  color:#FFF;
+  border-style: none;
+}
+
+.read-more{
+  position: absolute;
+  bottom: 50px;
+  margin: 0;
+  text-align: center;
+  min-width: 100%;
+  font-size: 22px;
+  background-color: rgba(255,255,255,0.1);
+  font-weight: 500;
+  height: 63px;
+  line-height: 63px;
+  border-style:none;
+  text-align: center;
+}
+
+.read-more > a:after {
+  position: absolute;
+  top: 8px;
+  left: 59%;
+  content:"";
+  background-image:url(arrow-right-white.svg);
+  display:inline-block;
+  // position:in;
+  width:40px;
+  height:40px;
+  margin: 5px;
+}
+
+}
+
+
+
+
+
+
+

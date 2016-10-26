@@ -4,14 +4,12 @@
 <div class="pitch-wrapper">
   <div class="pitch">{{ submission.pitch }}</div>
   <div class="expand-button">Read more</div>
-  <button class="like-button" value="{{ submission.id }}">I like this idea</button>
+  <button class="like-button icon-empty" value="{{ submission.id }}">I like this idea</button>
   <!-- {% if flags.shareButtons %}
     {% include "includes/share.html" %}
   {% endif %} -->
 
-  <!-- <button class="like-button" >Add to Favourites</button> -->
-
-  <div class="tweet-button">
+  <div class="tweet-button hidden">
     <a href="https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/&amp;text=Where%20is%20Britain%20headed%3F&amp;related=%40ft&amp;via=FT">
       <div class="tweet-icon"></div>
       <div class="tweet-text">Tweet this pitch</div>

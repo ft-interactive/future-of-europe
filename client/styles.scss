@@ -175,7 +175,6 @@ div.pitch {
 .like-button {
 border: 1px solid #EB3330;
 line-height: 40px;
-float: left;
 }
 
 .article-body > :not(.graphic){
@@ -188,9 +187,20 @@ float: left;
   border:none;
 }
 
-.like-button::before {
+.like-button.icon-empty::before {
   content:"";
-  background-image:url(like_btn.svg);
+  background-image: url("icons/ic_favorite_border_black_24px.svg");
+  background-repeat: no-repeat;
+  display:block;
+  position:absolute;
+  width:25px;
+  height:25px;
+  margin: 8px;
+}
+
+.like-button.icon-full::before {
+  content:"";
+  background-image: url("icons/ic_favorite_black_24px.svg");
   background-repeat: no-repeat;
   display:block;
   position:absolute;
@@ -271,6 +281,8 @@ div.hidden {
   color: #ECECEF;
 }
 
+.hidden {
+  display: none;
 
 .o-footer.o-footer--theme-light, .o-footer__brand {
   background-color: transparent !important;

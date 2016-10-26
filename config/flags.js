@@ -9,7 +9,7 @@ export default () => ({ // eslint-disable-line
   onwardjourney: false,
   shareButtons: true,
   header: true,
-  footer: false,
+  footer: true,
 
   /*
     NOTE ABOUT COMMENTS:

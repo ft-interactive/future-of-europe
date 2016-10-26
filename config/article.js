@@ -11,7 +11,7 @@ export default () => ({ // eslint-disable-line
   //       new Date('2016-05-17T17:11:22Z')
   // publishedDate: new Date(),
 
-  headline: 'Where is Britain headed?',
+  headline: 'A plan for Britain:',
 
   // summary === standfirst (Summary is what the content API calls it)
   summary: '',

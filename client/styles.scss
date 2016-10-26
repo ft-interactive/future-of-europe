@@ -184,9 +184,20 @@ line-height: 40px;
   border:none;
 }
 
-.like-button::before {
+.like-button.icon-empty::before {
   content:"";
-  background-image:url(like_btn.svg);
+  background-image: url("icons/ic_favorite_border_black_24px.svg");
+  background-repeat: no-repeat;
+  display:block;
+  position:absolute;
+  width:25px;
+  height:25px;
+  margin: 8px;
+}
+
+.like-button.icon-full::before {
+  content:"";
+  background-image: url("icons/ic_favorite_black_24px.svg");
   background-repeat: no-repeat;
   display:block;
   position:absolute;

@@ -81,7 +81,12 @@ randomButton.addEventListener('click', () => {
 likeButtons.forEach(likeButton => {
   likeButton.addEventListener('click', () => {
     const button = likeButton;
+    // const icon =
     let intervalId = {};
+
+    button.classList.remove('icon-empty');
+
+    button.classList.add('icon-full');
 
     function transition() {
       button.classList.add('hidden');

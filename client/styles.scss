@@ -257,7 +257,7 @@ text-align: center;
 padding: 9px;
 }
 
-div.hidden {
+.hidden {
   display: none;
 }
 
@@ -280,9 +280,6 @@ div.hidden {
 .read-more > a, .submit-button > a {
   color: #ECECEF;
 }
-
-.hidden {
-  display: none;
 
 .o-footer.o-footer--theme-light, .o-footer__brand {
   background-color: transparent !important;

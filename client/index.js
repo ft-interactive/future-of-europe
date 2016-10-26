@@ -3,9 +3,9 @@ const viewed = [];
 const likeButtons = document.querySelectorAll('.like-button');
 const randomButton = document.querySelector('#random-button');
 const favourites = [];
-const favouritesCounter = document.querySelector('#favourites-counter');
+// const favouritesCounter = document.querySelector('#favourites-counter');
 const hash = location.hash.slice(1);
-const viewAllButton = document.querySelector('#view-all-favourites');
+// const viewAllButton = document.querySelector('#view-all-favourites');
 
 function showEntries(array) {
   const hashString = array.join('-');
@@ -86,18 +86,18 @@ likeButtons.forEach(likeButton => {
 
     favourites.push(parseInt(button.value, 10));
 
-    favouritesCounter.innerHTML = favourites.length;
+    // favouritesCounter.innerHTML = favourites.length;
   });
 });
 
-viewAllButton.addEventListener('click', () => {
-  viewed.forEach(n => {
-    const div = document.querySelector(`div[data-index="${n}"]`);
-    div.style = '';
-  });
-
-  showEntries(favourites);
-});
+// viewAllButton.addEventListener('click', () => {
+//   viewed.forEach(n => {
+//     const div = document.querySelector(`div[data-index="${n}"]`);
+//     div.style = '';
+//   });
+//
+//   showEntries(favourites);
+// });
 
 // On load
 if (hash) {

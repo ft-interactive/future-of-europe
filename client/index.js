@@ -83,9 +83,6 @@ likeButtons.forEach(likeButton => {
     const button = likeButton;
     let switchButton = {};
 
-    button.classList.remove('icon-empty');
-    button.classList.add('icon-full');
-
     function transition() {
       button.classList.add('hidden');
       button.nextElementSibling.classList.remove('hidden');
@@ -93,7 +90,11 @@ likeButtons.forEach(likeButton => {
       clearInterval(switchButton);
     }
 
-    switchButton = setInterval(transition, 500);
+    switchButton = setInterval(transition, 750);
+
+    button.children[2].innerHTML = 'Liked!';
+
+    button.children[0].style.height = 0;
 
     favourites.push(parseInt(button.value, 10));
 

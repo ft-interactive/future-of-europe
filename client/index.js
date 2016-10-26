@@ -92,6 +92,8 @@ likeButtons.forEach(likeButton => {
 
     switchButton = setInterval(transition, 750);
 
+    button.disabled = true;
+
     button.children[2].innerHTML = 'Liked!';
 
     button.children[0].style.height = 0;

@@ -44,8 +44,6 @@ header.o-header.o-header--minimal {
 .o-header__container{
     position: relative;
     box-sizing: border-box;
-    // margin-left: auto;
-    // margin-right: auto;
     margin: 0;
     min-width: 240px;
     width: 100%;
@@ -128,7 +126,7 @@ div.pitch, div.article-body > p, p.o-typography-lead {
 div.pitch-wrapper {
 position: relative;
 display:block;
-
+text-align: center;
 }
 
 div.pitch {
@@ -162,7 +160,7 @@ div.pitch {
 }
 
 .tweet-button, .like-button, .random-button {
-  margin: 0 auto;
+  // margin: 0 auto;
   width: 220px;
   height: 40px;
   border-radius: 4px;
@@ -176,7 +174,17 @@ div.pitch {
 border: 1px solid #EB3330;
 line-height: 40px;
 position: relative;
+background-color: #191A32;
+margin: 10px 0;
 }
+
+.like-button, .tweet-button {
+margin: 10px 0;
+display:block;
+margin-left: auto;
+margin-right: auto;
+}
+
 
 .article-body > :not(.graphic){
   margin: 0 auto;
@@ -221,7 +229,6 @@ position: relative;
   position: relative;
   width: 100%;
   color: #ECECEF;
-  margin-top: 5px;
   font-size: 16px;
   line-height: 16px;
   padding: 10px 0;
@@ -271,7 +278,7 @@ padding: 9px;
 .read-more{
   // position: absolute;
   // bottom: 50px;
-  margin: 0;
+  margin: 10px 0;
   text-align: center;
   min-width: 100%;
   font-size: 22px;
@@ -288,9 +295,10 @@ padding: 9px;
   color: #ECECEF;
 }
 
-.o-footer.o-footer--theme-light, .o-footer__brand {
+footer.o-footer.o-footer--theme-light, .o-footer__brand {
   background-color: transparent !important;
   color: #ECECEF;
+  margin: 0;
 }
 
 div.o-footer__copyright {
@@ -344,8 +352,8 @@ small, .o-footer__legal-links > li > a {
 }
 
 .read-more{
-  position: absolute;
-  bottom: 50px;
+  // position: absolute;
+  // bottom: 50px;
   margin: 0;
   text-align: center;
   min-width: 100%;

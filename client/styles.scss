@@ -14,7 +14,7 @@
                 - index.js
                 - template.html
 */
-body 
+body
  {
   background:#191a32;
 
@@ -74,7 +74,7 @@ html {
 
 }
 
-.o-header__top-logo{    
+.o-header__top-logo{
     margin: 10px auto;
     padding: 3px 3px;
     position: relative;
@@ -103,7 +103,7 @@ html {
 
 body, .o-header__row, main {
   text-align: center;
-  
+
 }
 
 body {
@@ -172,7 +172,6 @@ div.pitch {
 .like-button {
 border: 1px solid #EB3330;
 line-height: 40px;
-float: left;
 }
 
 .article-body > :not(.graphic){
@@ -206,7 +205,7 @@ float: left;
   line-height: 16px;
   padding: 10px 0;
   text-align: center;
-  
+
 }
 
 .submit-button:after{
@@ -258,20 +257,20 @@ padding: 9px;
 
 
 
-div.hidden {
+.hidden {
   display: none;
 }
 
 @media only screen and (min-width: 740px) {
 
-  body 
+  body
 {background:url('Future of Britain illo__generator.svg')  #191a32;
   background-size:cover;
   background-position: center;
   width:100%;
 }
 
-  .o-header__top-logo{    
+  .o-header__top-logo{
     margin: 10px auto;
     padding: 6px 6px;
     position: relative;
@@ -333,10 +332,3 @@ div.hidden {
 }
 
 }
-
-
-
-
-
-
-

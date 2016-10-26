@@ -81,8 +81,17 @@ randomButton.addEventListener('click', () => {
 likeButtons.forEach(likeButton => {
   likeButton.addEventListener('click', () => {
     const button = likeButton;
+    let intervalId = {};
 
-    button.disabled = true;
+    function transition() {
+      button.classList.add('hidden');
+
+      button.nextElementSibling.classList.remove('hidden');
+
+      clearInterval(intervalId);
+    }
+
+    intervalId = setInterval(transition, 500);
 
     favourites.push(parseInt(button.value, 10));
 

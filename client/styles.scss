@@ -388,3 +388,20 @@ small, .o-footer__legal-links > li > a {
 }
 
 }
+
+.intro {
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  background-color: #191a32;
+  opacity: 0.9;
+  -webkit-backdrop-filter: blur(12px);
+  h1 {
+    max-width: 625px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+  }
+}

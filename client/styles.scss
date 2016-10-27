@@ -25,7 +25,6 @@ html {
     background:#191a32;
 }
 
-
 header.o-header.o-header--minimal {
     display: block;
     height:auto;
@@ -110,10 +109,14 @@ body {
   height: 100vh;
 }
 
+.article-body > :not(.graphic){
+  margin: 0 auto;
+}
+
 h1.o-typography-heading1 {
   color: #EB3330;
-  font-size: 31px;
-  line-height: 31px;
+  font-size: 41px;
+  line-height: 41px;
   margin: 9px auto 0;
 
 }
@@ -127,6 +130,7 @@ div.pitch-wrapper {
 position: relative;
 display:block;
 text-align: center;
+//background-color: #272F53;
 }
 
 div.pitch {
@@ -140,7 +144,7 @@ div.pitch {
 .expand-button {
   display: block;
   position: relative;
-  margin-top: 30%;
+  //margin-top: 30%;
   color: #808088;
   border: none;
 }
@@ -186,10 +190,6 @@ margin-right: auto;
 }
 
 
-.article-body > :not(.graphic){
-  margin: 0 auto;
-}
-
 .random-button{
   margin: 0;
   background:#EB3330;
@@ -231,13 +231,13 @@ margin-right: auto;
 
 .submit-button{
   position: relative;
+  text-align: center;
   width: 100%;
   color: #ECECEF;
   font-size: 16px;
   line-height: 16px;
-  padding: 10px 0;
-  text-align: center;
-
+  margin: 13px 0 !important;
+  padding: 0 !important;
 }
 
 .submit-button:after{
@@ -288,15 +288,26 @@ div.tweet-text {
   // bottom: 50px;
   margin: 10px 0;
   text-align: center;
-  min-width: 100%;
+  width: 100%;
   font-size: 22px;
   background-color: rgba(255,255,255,0.1);
   font-weight: 500;
   height: 63px;
   line-height: 63px;
   border-style:none;
-  text-align: center;
   color: #ECECEF;
+  padding: 0 !important;
+}
+
+.read-more > a:after {
+  position: relative;
+  top: 23%;
+  left: 5px;
+  content:"";
+  background-image:url(arrow-right-white.svg);
+  display:inline-block;
+  width:40px;
+  height:40px;
 }
 
 .read-more > a, .submit-button > a {
@@ -375,16 +386,14 @@ small, .o-footer__legal-links > li > a {
 }
 
 .read-more > a:after {
-  position: absolute;
-  top: 8px;
-  left: 59%;
+  position: relative;
+  top: 23%;
+  left: 5px;
   content:"";
   background-image:url(arrow-right-white.svg);
   display:inline-block;
-  // position:in;
   width:40px;
   height:40px;
-  margin: 5px;
 }
 
 }

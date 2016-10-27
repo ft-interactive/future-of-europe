@@ -30,7 +30,7 @@
   {% include "includes/share.html" %}
 {% endif %} -->
 
-<div data-pitch-count="{{ pitches.length }}">
+<div class="top-level-pitch" data-pitch-count="{{ pitches.length }}">
   {% for pitch in pitches %}
   <div data-index="{{ pitch.id }}" class="hidden">
     {{ PitchRandomizer(pitch) }}

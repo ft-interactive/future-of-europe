@@ -172,7 +172,7 @@ div.pitch {
 
 .like-button {
 border: 1px solid #EB3330;
-line-height: 40px;
+// line-height: 40px;
 position: relative;
 background-color: #191A32;
 margin: 10px 0;
@@ -196,27 +196,31 @@ margin-right: auto;
   border:none;
 }
 
-.like-button .icon-empty {
+.like-button .like-icon-empty {
   background-image: url("icons/ic_favorite_border_black_24px.svg");
   background-repeat: no-repeat;
   display:block;
   position:absolute;
+  top: 2px;
+  left: 3px;
   width:25px;
   height:25px;
-  margin: 8px;
+  margin: 5px;
   z-index: 1;
   -webkit-transition: height 750ms;
   transition: height 750ms;
 }
 
-.like-button .icon-full {
+.like-button .like-icon-full {
   background-image: url("icons/ic_favorite_black_24px.svg");
   background-repeat: no-repeat;
   display:block;
   position:absolute;
+  top: 2px;
+  left: 3px;
   width:25px;
   height: 25px;
-  margin: 8px;
+  margin: 5px;
 }
 
 @keyframes fill {
@@ -249,26 +253,30 @@ margin-right: auto;
 }
 
 .tweet-button,.tweet-button > a {
+  position: relative;
   background-color: #4099FF;
   color: #ECECEF;
   font-size: 22px;
   line-height: 22px;
   font-weight: 600;
+  border: none;
 }
 
-.tweet-button::before {
-  content:"";
+.tweet-button .tweet-icon {
   background-image:url(twitterBird.svg);
+  background-repeat: none;
   display:block;
   position:absolute;
+  top: 2px;
+  left: 5px;
   width:30px;
   height:30px;
-  margin: 6px 0 4px 6px;
+  margin: 5px 5px 5px 0;
 }
 
 div.tweet-text {
-text-align: center;
-padding: 9px;
+  text-align: center;
+  padding-top: 1px;
 }
 
 .hidden {

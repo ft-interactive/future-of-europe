@@ -5,20 +5,20 @@
   <div class="pitch">{{ submission.pitch }}</div>
   <div class="expand-button">Read more</div>
   <button class="like-button" value="{{ submission.id }}">
-    <span class="icon-empty"></span>
-    <span class="icon-full"></span>
-    <span>I like this idea</span>
+    <span class="like-icon-empty"></span>
+    <span class="like-icon-full"></span>
+    <div class="like-text">I like this idea</div>
   </button>
   <!-- {% if flags.shareButtons %}
     {% include "includes/share.html" %}
   {% endif %} -->
 
-  <div class="tweet-button hidden">
-    <a href="https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23{{ submission.id }}">
-      
-    <div class="tweet-text">Tweet this pitch</div>
-    </a>
-  </div>
+  <button class="tweet-button hidden" value="{{ submission.id }}">
+    <!-- <a href="https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23{{ submission.id }}"> -->
+      <span class="tweet-icon"></span>
+      <div class="tweet-text">Tweet this pitch</div>
+    <!-- </a> -->
+  </button>
 </div>
 {% endmacro %}
 

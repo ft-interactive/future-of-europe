@@ -1,8 +1,9 @@
 const pitchCount = parseInt(document.querySelector('div[data-pitch-count]').dataset.pitchCount, 10);
 const viewed = [];
 const likeButtons = document.querySelectorAll('.like-button');
+const tweetButtons = document.querySelectorAll('.tweet-button');
 const randomButton = document.querySelector('#random-button');
-const favourites = [];
+// const favourites = [];
 // const favouritesCounter = document.querySelector('#favourites-counter');
 const hash = location.hash.slice(1);
 // const viewAllButton = document.querySelector('#view-all-favourites');
@@ -68,8 +69,8 @@ function showRandom() {
 
       showEntries(array);
 
-      console.log(viewed);
-      console.log(viewed.length);
+      // console.log(viewed);
+      // console.log(viewed.length);
     }
   });
 }
@@ -98,9 +99,21 @@ likeButtons.forEach(likeButton => {
 
     button.children[0].style.height = 0;
 
-    favourites.push(parseInt(button.value, 10));
+    // favourites.push(parseInt(button.value, 10));
 
     // favouritesCounter.innerHTML = favourites.length;
+
+    window.ga('send', 'event', 'fob-likes', button.value);
+  });
+});
+
+tweetButtons.forEach(tweetButton => {
+  tweetButton.addEventListener('click', () => {
+    const button = tweetButton;
+
+    window.location.href = `https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23${button.value}`;
+
+    window.ga('send', 'event', 'fob-tweets', button.value);
   });
 });
 

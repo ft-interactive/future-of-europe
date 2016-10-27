@@ -105,8 +105,69 @@ body, .o-header__row, main {
 
 }
 
-body {
-  height: 100vh;
+// screen layout
+// main {
+//   height: 100vh;
+// }
+//
+// .article-head {
+//   height: 10vh;
+// }
+//
+// main {
+//   height: 90vh;
+// }
+//
+// .pitch-wrapper {
+//   height: 55vh;
+// }
+//
+// .pitch {
+//   height: 65%;
+// }
+
+ // end of screen layout
+
+// FLEX BOX LAYOUT
+
+.article-head {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: center;
+    }
+
+.top-level-pitch {
+    order: 0;
+    flex: 3 1 20vh;
+    align-self: auto;
+    }
+
+.random-button {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.submit-button {
+    order: 0;
+    flex: 0 2 auto;
+    align-self: auto;
+    }
+
+.read-more {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+// END FLEX BOX
+
+.article-head {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .article-body > :not(.graphic){
@@ -115,7 +176,7 @@ body {
 
 h1.o-typography-heading1 {
   color: #EB3330;
-  font-size: 41px;
+  font-size: 40px;
   line-height: 41px;
   margin: 9px auto 0;
 
@@ -130,21 +191,22 @@ div.pitch-wrapper {
 position: relative;
 display:block;
 text-align: center;
-//background-color: #272F53;
 }
 
 div.pitch {
   position: relative;
-  height: 20vh;
-  font-size: 28px;
-  line-height: 30px;
+  height: 27vh;
+  font-size: 35px;
+  line-height: 35px;
   overflow: scroll;
+  display: inline-block;
+  padding: 0 5%;
 }
 
 .expand-button {
   display: block;
   position: relative;
-  //margin-top: 30%;
+  margin: 25px 0;
   color: #808088;
   border: none;
 }
@@ -284,12 +346,10 @@ div.tweet-text {
 }
 
 .read-more{
-  // position: absolute;
-  // bottom: 50px;
   margin: 10px 0;
   text-align: center;
   width: 100%;
-  font-size: 22px;
+  font-size: 20px;
   background-color: rgba(255,255,255,0.1);
   font-weight: 500;
   height: 63px;
@@ -313,6 +373,7 @@ div.tweet-text {
 .read-more > a, .submit-button > a {
   color: #ECECEF;
 }
+
 
 footer.o-footer.o-footer--theme-light, .o-footer__brand {
   background-color: transparent !important;
@@ -353,8 +414,12 @@ small, .o-footer__legal-links > li > a {
   div.pitch {
   font-size: 35px;
   line-height: 35px;
+
 }
 
+  .read-more {
+    min-width:100%;
+  }
 
 }
 

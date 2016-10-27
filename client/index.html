@@ -13,7 +13,7 @@
     {% include "includes/share.html" %}
   {% endif %} -->
 
-  <button class="tweet-button hidden" value="{{ submission.id }}">
+  <button class="tweet-button" value="{{ submission.id }}">
     <!-- <a href="https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23{{ submission.id }}"> -->
       <span class="tweet-icon"></span>
       <div class="tweet-text">Tweet this pitch</div>
@@ -32,14 +32,16 @@
 
 <div class="top-level-pitch" data-pitch-count="{{ pitches.length }}">
   {% for pitch in pitches %}
-  <div data-index="{{ pitch.id }}" class="hidden">
+  <div data-index="{{ pitch.id }}" class="card">
     {{ PitchRandomizer(pitch) }}
   </div>
   {% endfor %}
 </div>
 
-<button class="random-button" id="random-button">Show Me Another</button>
-  <div class="submit-button"><a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">or add your own</a></div>
+<button class="random-button" id="random-button">Get Started</button>
+
+<div class="submit-button"><a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">or add your own</a></div>
+
 <div class="read-more"><a href="https://www.ft.com/the-future-of-britain-project" target="_blank">Read more about the project</a></div>
 
 <!-- <p>

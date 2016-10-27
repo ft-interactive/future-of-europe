@@ -54,30 +54,25 @@ function showRandom() {
   viewed.forEach(n => {
     const div = document.querySelector(`div[data-index="${n}"]`);
 
-    div.style = '';
+    div.style.display = 'none';
   });
 
   array.push(getRandomIndex(1, pitchCount));
 
   array.forEach(n => {
     if (viewed.indexOf(n) > -1) {
-      console.log('Duplicate, re-randomising');
+      console.log(`${n} has been viewed, re-randomising`);
 
-      showRandom();
+      // showRandom();
     } else {
       viewed.push(n);
-
-      showEntries(array);
-
       // console.log(viewed);
       // console.log(viewed.length);
     }
   });
-}
 
-randomButton.addEventListener('click', () => {
-  showRandom();
-});
+  showEntries(array);
+}
 
 for (let i = 0; i < likeButtons.length; i++) {
   const attachListeners = (likeButton) => {
@@ -88,8 +83,8 @@ for (let i = 0; i < likeButtons.length; i++) {
       let switchButton = {};
 
       function transition() {
-        button.classList.add('hidden');
-        button.nextElementSibling.classList.remove('hidden');
+        button.style.display = 'none';
+        button.nextElementSibling.style.display = 'block';
 
         clearInterval(switchButton);
       }
@@ -136,7 +131,31 @@ for (let i = 0; i < tweetButtons.length; i++) {
 //   showEntries(favourites);
 // });
 
+function getStarted() {
+  let removeIntro = {};
+
+  randomButton.removeEventListener('click', getStarted);
+
+  randomButton.innerHTML = 'Show Me Another';
+
+  function remove() {
+    document.querySelector('.intro').style.display = 'none';
+
+    clearInterval(removeIntro);
+  }
+
+  removeIntro = setInterval(remove, 100);
+
+  document.querySelector('.intro').style.opacity = 0;
+
+  randomButton.addEventListener('click', () => {
+    showRandom();
+  });
+}
+
 // On load
+randomButton.addEventListener('click', getStarted);
+
 if (hash) {
   const hashArray = hash.split('-');
   const hashNumbers = [];
@@ -149,6 +168,7 @@ if (hash) {
       viewed.push(int);
     } else {
       console.log(`${item} is not a number`);
+      showRandom();
     }
   });
 

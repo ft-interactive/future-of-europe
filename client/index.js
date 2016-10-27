@@ -79,43 +79,53 @@ randomButton.addEventListener('click', () => {
   showRandom();
 });
 
-likeButtons.forEach(likeButton => {
-  likeButton.addEventListener('click', () => {
+for (let i = 0; i < likeButtons.length; i++) {
+  const attachListeners = (likeButton) => {
     const button = likeButton;
-    let switchButton = {};
 
-    function transition() {
-      button.classList.add('hidden');
-      button.nextElementSibling.classList.remove('hidden');
+    button.addEventListener('click', () => {
+      // const button = likeButton[i];
+      let switchButton = {};
 
-      clearInterval(switchButton);
-    }
+      function transition() {
+        button.classList.add('hidden');
+        button.nextElementSibling.classList.remove('hidden');
 
-    switchButton = setInterval(transition, 750);
+        clearInterval(switchButton);
+      }
 
-    button.disabled = true;
+      switchButton = setInterval(transition, 750);
 
-    button.children[2].innerHTML = 'Liked!';
+      button.disabled = true;
 
-    button.children[0].style.height = 0;
+      button.children[2].innerHTML = 'Liked!';
 
-    // favourites.push(parseInt(button.value, 10));
+      button.children[0].style.height = 0;
 
-    // favouritesCounter.innerHTML = favourites.length;
+      // favourites.push(parseInt(button.value, 10));
 
-    window.ga('send', 'event', 'fob-likes', button.value);
-  });
-});
+      // favouritesCounter.innerHTML = favourites.length;
 
-tweetButtons.forEach(tweetButton => {
-  tweetButton.addEventListener('click', () => {
+      window.ga('send', 'event', 'fob-likes', button.value);
+    });
+  };
+
+  attachListeners(likeButtons[i]);
+}
+
+for (let i = 0; i < tweetButtons.length; i++) {
+  const attachListeners = (tweetButton) => {
     const button = tweetButton;
 
-    window.location.href = `https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23${button.value}`;
+    button.addEventListener('click', () => {
+      window.location.href = `https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23${button.value}`;
 
-    window.ga('send', 'event', 'fob-tweets', button.value);
-  });
-});
+      window.ga('send', 'event', 'fob-tweets', button.value);
+    });
+  };
+
+  attachListeners(tweetButtons[i]);
+}
 
 // viewAllButton.addEventListener('click', () => {
 //   viewed.forEach(n => {

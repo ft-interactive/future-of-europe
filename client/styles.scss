@@ -122,6 +122,12 @@ body, .o-header__row, main {
     align-self: auto;
     }
 
+  .like-button, .tweet-button {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
 .random-button {
     order: 0;
     flex: 0 1 auto;
@@ -215,15 +221,12 @@ div.pitch {
 
 .like-button {
 border: 1px solid #EB3330;
-// line-height: 40px;
 position: relative;
 background-color: #191A32;
-margin: 10px 0;
 }
 
 .like-button, .tweet-button {
-margin: 10px 0;
-display:block;
+margin: 10px 0  !important;
 margin-left: auto;
 margin-right: auto;
 }
@@ -411,6 +414,10 @@ small, .o-footer__legal-links > li > a {
 
   .read-more {
     min-width:100%;
+  }
+
+  .like-button, .tweet-button, .random-button {
+    margin: 10px 15px !important;
   }
 
   footer.o-footer.o-footer--theme-light, .o-footer__brand {

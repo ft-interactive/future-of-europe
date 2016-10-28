@@ -37,11 +37,8 @@ function showEntries(array) {
     randomButton.parentNode.replaceChild(submitOwnButton, randomButton);
 
     submitOwnButton.innerHTML = 'Submit your own';
-
     submitOwnButton.classList.remove('random-button');
-
     submitOwnButton.classList.add('submit-button');
-
     submitOwnButton.addEventListener('click', () => {
       window.location.href = 'https://ig.ft.com/sites/future-of-britain-form/';
     });
@@ -55,27 +52,35 @@ function getRandomIndex(min, max) {
 function showRandom() {
   const array = [];
 
-  viewed.forEach(n => {
-    const div = document.querySelector(`div[data-index="${n}"]`);
-
-    div.style.display = 'none';
-  });
-
   array.push(getRandomIndex(1, pitchCount));
 
-  array.forEach(n => {
-    if (viewed.indexOf(n) > -1) {
-      console.log(`${n} has been viewed, re-randomising`);
+  if (viewed.indexOf(array[0]) > -1) {
+    console.log(`${array[0]} has been viewed, re-randomising`);
 
-      // showRandom();
-    } else {
-      viewed.push(n);
-      // console.log(viewed);
-      // console.log(viewed.length);
-    }
-  });
+    showRandom();
+  } else {
+    viewed.forEach(n => {
+      const div = document.querySelector(`div[data-index="${n}"]`);
 
-  showEntries(array);
+      div.style.display = 'none';
+    });
+
+    showEntries(array);
+
+    likeButton.disabled = false;
+    likeButton.children[2].innerHTML = 'I like this idea';
+    likeButton.children[0].style.height = '';
+
+    tweetButton.style.display = 'none';
+
+    likeButton.style.display = 'block';
+
+    viewed.push(array[0]);
+
+    randomButton.disabled = false;
+
+    console.log(viewed);
+  }
 }
 
 likeButton.addEventListener('click', () => {
@@ -83,7 +88,7 @@ likeButton.addEventListener('click', () => {
 
   function transition() {
     likeButton.style.display = 'none';
-    likeButton.nextElementSibling.style.display = 'block';
+    tweetButton.style.display = 'block';
 
     clearInterval(switchButton);
   }
@@ -160,6 +165,8 @@ if (hash) {
   randomButton.innerHTML = 'Show me another';
 
   randomButton.addEventListener('click', () => {
+    randomButton.disabled = true;
+
     showRandom();
   });
 

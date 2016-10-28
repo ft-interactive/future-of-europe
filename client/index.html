@@ -1,10 +1,10 @@
 {% extends "layout.html" %}
 
 {% macro PitchRandomizer(submission) %}
-<div class="pitch-wrapper">
-  <div class="pitch">{{ submission.pitch }}</div>
-  <div class="expand-button">Tell me more</div>
-</div>
+  <div class="pitch-wrapper">
+    <div class="pitch">{{ submission.pitch }}</div>
+    <div class="expand-button">Tell me more</div>
+  </div>
 {% endmacro %}
 
 {% block article_body %}
@@ -22,7 +22,7 @@
     <div class="like-text">I like this idea</div>
   </button>
 
-  <button class="tweet-button hidden" value="">
+  <button class="tweet-button" value="">
     <span class="tweet-icon"></span>
     <div class="tweet-text">Tweet this pitch</div>
   </button>

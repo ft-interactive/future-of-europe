@@ -107,7 +107,6 @@ header.o-header.o-header--minimal {
 
 body, .o-header__row, main {
   text-align: center;
-
 }
 
 .article-body > :not(.graphic){
@@ -168,18 +167,16 @@ h1.o-typography-heading1 {
   font-size: 40px;
   line-height: 41px;
   margin: 9px auto 0;
-
 }
 
 div.pitch, div.article-body > p, p.o-typography-lead {
   color: #ECECEF;
-
 }
 
 div.pitch-wrapper {
-position: relative;
-display:block;
-text-align: center;
+  position: relative;
+  display: block;
+  text-align: center;
 }
 
 div.pitch {
@@ -200,21 +197,22 @@ div.pitch {
   border: none;
 }
 
-.expand-button:after{
-  content:"";
-  background-image:url(ic_add_white_24px.svg);
+.expand-button::after {
+  content: "";
+  background-image: url(ic_add_white_24px.svg);
   background-repeat: no-repeat;
-  display:inline-block;
+  display: inline-block;
   position: relative;
   top: 6px;
-  width:20px;
-  height:20px;
+  width: 20px;
+  height: 20px;
   margin-left: 6px;
   opacity: .5;
-
 }
 
-.tweet-button, .like-button, .random-button {
+.tweet-button,
+.like-button,
+.random-button {
   width: 220px;
   height: 40px;
   border-radius: 4px;
@@ -225,14 +223,15 @@ div.pitch {
 
 
 .like-button {
-border: 1px solid #EB3330;
-background-color: #191A32;
+  border: 1px solid #EB3330;
+  background-color: #191A32;
 }
 
-.like-button, .tweet-button {
-position: relative;
-margin-left: auto;
-margin-right: auto;
+.like-button,
+.tweet-button {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .random-button {
@@ -246,12 +245,12 @@ margin-right: auto;
 .like-button .like-icon-empty {
   background-image: url("icons/ic_favorite_border_black_24px.svg");
   background-repeat: no-repeat;
-  display:block;
-  position:absolute;
+  display: block;
+  position: absolute;
   top: 2px;
   left: 3px;
-  width:25px;
-  height:25px;
+  width: 25px;
+  height: 25px;
   margin: 5px;
   z-index: 1;
   -webkit-transition: height 750ms;
@@ -261,11 +260,11 @@ margin-right: auto;
 .like-button .like-icon-full {
   background-image: url("icons/ic_favorite_black_24px.svg");
   background-repeat: no-repeat;
-  display:block;
-  position:absolute;
+  display: block;
+  position: absolute;
   top: 2px;
   left: 3px;
-  width:25px;
+  width: 25px;
   height: 25px;
   margin: 5px;
 }
@@ -280,7 +279,7 @@ margin-right: auto;
   }
 }
 
-.submit-button{
+.submit-button {
   position: relative;
   text-align: center;
   width: 100%;
@@ -292,17 +291,18 @@ margin-right: auto;
 }
 
 .submit-button::after{
-  content:"";
+  content: "";
   display: block;
   background: rgba(255,255,255,0.9);
   width: 100%;
-  height:1px;
+  height: 1px;
   color: #ECECEF;
   max-width: 120px;
   margin: 0 auto;
 }
 
-.tweet-button,.tweet-button > a {
+.tweet-button,
+.tweet-button > a {
   display: none;
   position: relative;
   background-color: #4099FF;
@@ -314,14 +314,14 @@ margin-right: auto;
 }
 
 .tweet-button .tweet-icon {
-  background-image:url(twitterBird.svg);
+  background-image: url(twitterBird.svg);
   background-repeat: no-repeat;
-  display:block;
-  position:absolute;
+  display: block;
+  position: absolute;
   top: 2px;
   left: 5px;
-  width:30px;
-  height:30px;
+  width: 30px;
+  height: 30px;
   margin: 5px 5px 5px 0;
 }
 
@@ -346,7 +346,7 @@ div.tweet-text {
   display: none;
 }
 
-.read-more{
+.read-more {
   margin: 10px 0;
   text-align: center;
   width: 100%;
@@ -355,37 +355,40 @@ div.tweet-text {
   font-weight: 500;
   height: 63px;
   line-height: 63px;
-  border-style:none;
+  border-style: none;
   color: #ECECEF;
   padding: 0 !important;
 }
 
-.read-more > a:after {
+.read-more > a::after {
   position: relative;
   top: 23%;
   left: 5px;
-  content:"";
-  background-image:url(arrow-right-white.svg);
-  display:inline-block;
-  width:40px;
-  height:40px;
+  content: "";
+  background-image: url(arrow-right-white.svg);
+  display: inline-block;
+  width: 40px;
+  height: 40px;
 }
 
-.read-more > a, .submit-button > a {
+.read-more > a,
+.submit-button > a {
   color: #ECECEF;
 }
 
-footer.o-footer.o-footer--theme-light, .o-footer__brand {
+footer.o-footer.o-footer--theme-light,
+.o-footer__brand {
   background-color: transparent !important;
   color: #ECECEF;
-  margin: 20px 0 0 0;
+  margin-top: 0;
 }
 
 div.o-footer__copyright {
   margin: 10px 0 0 0;
 }
 
-small, .o-footer__legal-links > li > a {
+small,
+.o-footer__legal-links > li > a {
   color: #ECECEF;
 }
 
@@ -394,15 +397,14 @@ div.o-footer__brand {
 }
 
 @media only screen and (min-width: 740px) {
-
   body {
-  background:url('Future of Britain illo__generator.svg')  #191a32;
-  background-size:cover;
-  background-position: center;
-  width:100%;
+    background: url('Future of Britain illo__generator.svg') #191a32;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
   }
 
-  .o-header__top-logo{
+  .o-header__top-logo {
     margin: 10px auto;
     padding: 6px 6px;
     position: relative;
@@ -416,8 +418,8 @@ div.o-footer__brand {
   }
 
   h1.o-typography-heading1 {
-  font-size: 59px;
-  line-height: 59px;
+    font-size: 59px;
+    line-height: 59px;
   }
 
   div.pitch-wrapper {
@@ -425,16 +427,16 @@ div.o-footer__brand {
   }
 
   div.pitch {
-  max-width: 100%;
-  font-size: 40px;
-  line-height: 43px;
-  height: 27vh;
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 43px;
+    height: 27vh;
   }
 
   div.submit-button {
-      text-align: center;
-      min-width: 100%;
-      padding: 15px 0 !important;
+    text-align: center;
+    min-width: 100%;
+    padding: 15px 0 !important;
   }
 
   .expand-button {
@@ -442,60 +444,51 @@ div.o-footer__brand {
     font-size: 20px;
   }
 
-  .like-button, .tweet-button, .random-button {
+  .like-button,
+  .tweet-button,
+  .random-button {
     margin: 10px 15px !important;
   }
 
-  .like-button, .tweet-button {
-
+  .read-more {
+    min-width:100%;
   }
-
-    .read-more {
-      min-width:100%;
-    }
-
-  footer.o-footer.o-footer--theme-light, .o-footer__brand {
-    margin: 30px 0 0 0;
-  }
-
 }
 
 @media only screen and (min-width: 980px) {
-
   div.pitch {
-  font-size: 42px;
-  line-height: 44px;
-}
+    font-size: 42px;
+    line-height: 44px;
+  }
 
-.o-typography-body-wrapper a {
-  color:#FFF;
-  border-style: none;
-}
+  .o-typography-body-wrapper a {
+    color: #FFF;
+    border-style: none;
+  }
 
-.read-more{
-  margin: 0;
-  text-align: center;
-  min-width: 100%;
-  font-size: 22px;
-  background-color: rgba(255,255,255,0.1);
-  font-weight: 500;
-  height: 63px;
-  line-height: 63px;
-  border-style:none;
-  text-align: center;
-}
+  .read-more {
+    margin: 0;
+    text-align: center;
+    min-width: 100%;
+    font-size: 22px;
+    background-color: rgba(255,255,255,0.1);
+    font-weight: 500;
+    height: 63px;
+    line-height: 63px;
+    border-style: none;
+    text-align: center;
+  }
 
-.read-more > a:after {
-  position: relative;
-  top: 23%;
-  left: 5px;
-  content:"";
-  background-image:url(arrow-right-white.svg);
-  display:inline-block;
-  width:40px;
-  height:40px;
-}
-
+  .read-more > a::after {
+    position: relative;
+    top: 23%;
+    left: 5px;
+    content: "";
+    background-image: url(arrow-right-white.svg);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .overlay {

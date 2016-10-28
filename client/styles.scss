@@ -476,6 +476,7 @@ small, .o-footer__legal-links > li > a {
 }
 
 .overlay {
+  display: none;
   position: fixed;
   top: 0px;
   left: 0px;

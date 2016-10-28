@@ -1,8 +1,8 @@
 const pitchCount = parseInt(document.querySelector('div[data-pitch-count]').dataset.pitchCount, 10);
 const viewed = [];
-const likeButtons = document.querySelectorAll('.like-button');
-const tweetButtons = document.querySelectorAll('.tweet-button');
-const randomButton = document.querySelector('#random-button');
+const likeButton = document.querySelector('.like-button');
+const tweetButton = document.querySelector('.tweet-button');
+const randomButton = document.querySelector('.random-button');
 // const favourites = [];
 // const favouritesCounter = document.querySelector('#favourites-counter');
 const hash = location.hash.slice(1);
@@ -12,12 +12,16 @@ function showEntries(array) {
   const hashString = array.join('-');
 
   // Display div index
-  array.forEach(n => {
-    const div = document.querySelector(`div[data-index="${n}"]`);
+  // array.forEach(n => {
+  const div = document.querySelector(`div[data-index="${array[0]}"]`);
 
-    div.style.display = 'block';
-    div.classList.add('viewed');
-  });
+  div.style.display = 'block';
+  div.classList.add('viewed');
+  // });
+
+  // Change button values
+  likeButton.value = array[0];
+  tweetButton.value = array[0];
 
   // Change the address bar
   if (history.replaceState) {
@@ -74,53 +78,36 @@ function showRandom() {
   showEntries(array);
 }
 
-for (let i = 0; i < likeButtons.length; i++) {
-  const attachListeners = (likeButton) => {
-    const button = likeButton;
+likeButton.addEventListener('click', () => {
+  let switchButton = {};
 
-    button.addEventListener('click', () => {
-      // const button = likeButton[i];
-      let switchButton = {};
+  function transition() {
+    likeButton.style.display = 'none';
+    likeButton.nextElementSibling.style.display = 'block';
 
-      function transition() {
-        button.style.display = 'none';
-        button.nextElementSibling.style.display = 'block';
+    clearInterval(switchButton);
+  }
 
-        clearInterval(switchButton);
-      }
+  switchButton = setInterval(transition, 750);
 
-      switchButton = setInterval(transition, 750);
+  likeButton.disabled = true;
 
-      button.disabled = true;
+  likeButton.children[2].innerHTML = 'Liked!';
 
-      button.children[2].innerHTML = 'Liked!';
+  likeButton.children[0].style.height = 0;
 
-      button.children[0].style.height = 0;
+  // favourites.push(parseInt(button.value, 10));
 
-      // favourites.push(parseInt(button.value, 10));
+  // favouritesCounter.innerHTML = favourites.length;
 
-      // favouritesCounter.innerHTML = favourites.length;
+  window.ga('send', 'event', 'fob-likes', likeButton.value);
+});
 
-      window.ga('send', 'event', 'fob-likes', button.value);
-    });
-  };
+tweetButton.addEventListener('click', () => {
+  window.location.href = `https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23${tweetButton.value}`;
 
-  attachListeners(likeButtons[i]);
-}
-
-for (let i = 0; i < tweetButtons.length; i++) {
-  const attachListeners = (tweetButton) => {
-    const button = tweetButton;
-
-    button.addEventListener('click', () => {
-      window.location.href = `https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23${button.value}`;
-
-      window.ga('send', 'event', 'fob-tweets', button.value);
-    });
-  };
-
-  attachListeners(tweetButtons[i]);
-}
+  window.ga('send', 'event', 'fob-tweets', tweetButton.value);
+});
 
 // viewAllButton.addEventListener('click', () => {
 //   viewed.forEach(n => {
@@ -174,5 +161,9 @@ if (hash) {
 
   showEntries(hashNumbers);
 } else {
+  const overlay = document.querySelector('.overlay');
+
+  overlay.style.display = 'block';
+
   showRandom();
 }

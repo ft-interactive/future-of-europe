@@ -66,7 +66,7 @@ function showRandom() {
     randomButton.disabled = false;
   } else {
     // Change the random button on the last pitch
-    document.querySelector('.top-level-pitch').innerHTML = '<p>The end</p>';
+    document.querySelector('.top-level-pitch').innerHTML = '<div class="pitch">You\'ve reached the end of the pitches.<div class="submit-button"><a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">Submit your own?</a></div></div>';
 
     document.querySelector('.button-container').innerHTML = '';
   }
@@ -85,13 +85,10 @@ likeButton.addEventListener('click', () => {
   switchButton = setInterval(transition, 750);
 
   likeButton.disabled = true;
-
   likeButton.children[2].innerHTML = 'Liked!';
-
   likeButton.children[0].style.height = 0;
 
   // favourites.push(parseInt(button.value, 10));
-
   // favouritesCounter.innerHTML = favourites.length;
 
   window.ga('send', 'event', 'fob-likes', likeButton.value);

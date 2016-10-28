@@ -17,7 +17,7 @@
 
 <div class="top-level-pitch" data-pitch-count="{{ pitches.length }}">
   {% for pitch in pitches %}
-  <div data-index="{{ pitch.id }}" class="hidden">
+  <div data-index="{{ pitch.id }}" class="card">
     {{ PitchRandomizer(pitch) }}
   </div>
   {% endfor %}
@@ -36,7 +36,7 @@
 </button>
 <button class="random-button" id="random-button">Show Me Another</button>
   <div class="submit-button"><a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">or submit your own</a></div>
-<div class="read-more"><a href="https://www.ft.com/the-future-of-britain-project" target="_blank">Read more about the project</a></div>
+  <div class="read-more"><a href="https://www.ft.com/the-future-of-britain-project" target="_blank">Read more about the project</a></div>
 
 <!-- <p>
   No. of favourites: <span id="favourites-counter"></span>

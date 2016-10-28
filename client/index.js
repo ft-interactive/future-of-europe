@@ -139,14 +139,14 @@ function getStarted() {
   randomButton.innerHTML = 'Show Me Another';
 
   function remove() {
-    document.querySelector('.intro').style.display = 'none';
+    document.querySelector('.overlay').style.display = 'none';
 
     clearInterval(removeIntro);
   }
 
   removeIntro = setInterval(remove, 100);
 
-  document.querySelector('.intro').style.opacity = 0;
+  document.querySelector('.overlay').style.opacity = 0;
 
   randomButton.addEventListener('click', () => {
     showRandom();

@@ -4,21 +4,6 @@
 <div class="pitch-wrapper">
   <div class="pitch">{{ submission.pitch }}</div>
   <div class="expand-button">Read more</div>
-  <button class="like-button" value="{{ submission.id }}">
-    <span class="like-icon-empty"></span>
-    <span class="like-icon-full"></span>
-    <div class="like-text">I like this idea</div>
-  </button>
-  <!-- {% if flags.shareButtons %}
-    {% include "includes/share.html" %}
-  {% endif %} -->
-
-  <button class="tweet-button hidden" value="{{ submission.id }}">
-    <!-- <a href="https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23{{ submission.id }}"> -->
-      <span class="tweet-icon"></span>
-      <div class="tweet-text">Tweet this pitch</div>
-    <!-- </a> -->
-  </button>
 </div>
 {% endmacro %}
 
@@ -38,8 +23,19 @@
   {% endfor %}
 </div>
 
+<button class="like-button" value="{{ submission.id }}">
+  <span class="like-icon-empty"></span>
+  <span class="like-icon-full"></span>
+  <div class="like-text">I like this idea</div>
+</button>
+<button class="tweet-button hidden" value="{{ submission.id }}">
+  <!-- <a href="https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23{{ submission.id }}"> -->
+    <span class="tweet-icon"></span>
+    <div class="tweet-text">Tweet this pitch</div>
+  <!-- </a> -->
+</button>
 <button class="random-button" id="random-button">Show Me Another</button>
-  <div class="submit-button"><a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">or add your own</a></div>
+  <div class="submit-button"><a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">or submit your own</a></div>
 <div class="read-more"><a href="https://www.ft.com/the-future-of-britain-project" target="_blank">Read more about the project</a></div>
 
 <!-- <p>

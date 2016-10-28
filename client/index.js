@@ -59,7 +59,7 @@ function showRandom() {
 
     tweetButton.style.display = 'none';
 
-    likeButton.style.display = '';
+    likeButton.style.display = 'inline-block';
 
     viewed.push(array[0]);
 
@@ -77,7 +77,7 @@ likeButton.addEventListener('click', () => {
 
   function transition() {
     likeButton.style.display = 'none';
-    tweetButton.style.display = 'block';
+    tweetButton.style.display = 'inline-block';
 
     clearInterval(switchButton);
   }

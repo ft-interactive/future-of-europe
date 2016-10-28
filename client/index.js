@@ -85,7 +85,7 @@ likeButton.addEventListener('click', () => {
   switchButton = setInterval(transition, 750);
 
   likeButton.disabled = true;
-  likeButton.children[2].innerHTML = 'Liked!';
+  likeButton.children[2].innerHTML = 'Liked';
   likeButton.children[0].style.height = 0;
 
   // favourites.push(parseInt(button.value, 10));

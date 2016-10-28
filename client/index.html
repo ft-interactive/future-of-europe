@@ -8,39 +8,38 @@
 {% endmacro %}
 
 {% block article_body %}
-<!-- <div class="pitch">"Political language is designed to make lies sound truthful and murder respectable, and to give an appearance of solidity to pure wind"</div>
-<div class="expand-button">Read more</div>
-<div class="like-button">Like</div>
-{% if flags.shareButtons %}
-  {% include "includes/share.html" %}
-{% endif %} -->
-
-<div class="top-level-pitch" data-pitch-count="{{ pitches.length }}">
-  {% for pitch in pitches %}
-  <div data-index="{{ pitch.id }}" class="card">
-    {{ PitchRandomizer(pitch) }}
+  <div class="top-level-pitch" data-pitch-count="{{ pitches.length }}">
+    {% for pitch in pitches %}
+      <div data-index="{{ pitch.id }}" class="card">
+        {{ PitchRandomizer(pitch) }}
+      </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
 
-<button class="like-button" value="{{ submission.id }}">
-  <span class="like-icon-empty"></span>
-  <span class="like-icon-full"></span>
-  <div class="like-text">I like this idea</div>
-</button>
-<button class="tweet-button hidden" value="{{ submission.id }}">
-  <!-- <a href="https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23{{ submission.id }}"> -->
+  <button class="like-button" value="">
+    <span class="like-icon-empty"></span>
+    <span class="like-icon-full"></span>
+    <div class="like-text">I like this idea</div>
+  </button>
+
+  <button class="tweet-button hidden" value="">
     <span class="tweet-icon"></span>
     <div class="tweet-text">Tweet this pitch</div>
-  <!-- </a> -->
-</button>
-<button class="random-button" id="random-button">Show Me Another</button>
-  <div class="submit-button"><a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">or submit your own</a></div>
-  <div class="read-more"><a href="https://www.ft.com/the-future-of-britain-project" target="_blank">Read more about the project</a></div>
+  </button>
 
-<!-- <p>
-  No. of favourites: <span id="favourites-counter"></span>
-</p> -->
+  <button class="random-button">Get started</button>
 
-<!-- <button id="view-all-favourites">View All Favourites</button> -->
+  <div class="submit-button">
+    <a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">or submit your own</a>
+  </div>
+
+  <div class="read-more">
+    <a href="https://www.ft.com/the-future-of-britain-project" target="_blank">Read more about the project</a>
+  </div>
+
+  <!-- <p>
+    No. of favourites: <span id="favourites-counter"></span>
+  </p> -->
+
+  <!-- <button id="view-all-favourites">View All Favourites</button> -->
 {% endblock %}

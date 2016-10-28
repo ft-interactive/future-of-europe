@@ -110,6 +110,10 @@ body, .o-header__row, main {
 
 }
 
+.article-body > :not(.graphic){
+  margin: 0 auto;
+}
+
 // FLEX BOX LAYOUT
 
 .article-head {
@@ -158,9 +162,6 @@ body, .o-header__row, main {
   margin-bottom: 0;
 }
 
-.article-body > :not(.graphic){
-  margin: 0 auto;
-}
 
 h1.o-typography-heading1 {
   color: #EB3330;
@@ -194,7 +195,7 @@ div.pitch {
 .expand-button {
   display: block;
   position: relative;
-  margin: 10px 0;
+  margin: 10px 0 25px 0;
   color: #808088;
   border: none;
 }
@@ -214,7 +215,6 @@ div.pitch {
 }
 
 .tweet-button, .like-button, .random-button {
-  // margin: 0 auto;
   width: 220px;
   height: 40px;
   border-radius: 4px;
@@ -226,12 +226,11 @@ div.pitch {
 
 .like-button {
 border: 1px solid #EB3330;
-position: relative;
 background-color: #191A32;
 }
 
 .like-button, .tweet-button {
-margin: 10px 0  !important;
+position: relative;
 margin-left: auto;
 margin-right: auto;
 }
@@ -239,10 +238,13 @@ margin-right: auto;
 
 .random-button {
   position: relative;
-  margin: 0;
   background: #EB3330;
   border: none;
   z-index: 1000;
+}
+
+#random-button {
+  margin: 10px 0 0 0;
 }
 
 .like-button .like-icon-empty {
@@ -297,7 +299,6 @@ margin-right: auto;
   content:"";
   display: block;
   background: rgba(255,255,255,0.9);
-  //border-bottom: 1px solid white;
   width: 100%;
   height:1px;
   color: #ECECEF;
@@ -380,6 +381,10 @@ small, .o-footer__legal-links > li > a {
   color: #ECECEF;
 }
 
+div.o-footer__brand {
+  margin-top: 0;
+}
+
 @media only screen and (min-width: 740px) {
 
   body {
@@ -433,6 +438,9 @@ small, .o-footer__legal-links > li > a {
     margin: 10px 15px !important;
   }
 
+  .like-button, .tweet-button {
+
+  }
 
     .read-more {
       min-width:100%;
@@ -442,9 +450,6 @@ small, .o-footer__legal-links > li > a {
     margin: 30px 0 0 0;
   }
 
-  div.o-footer__brand {
-    margin-top: 0;
-  }
 }
 
 @media only screen and (min-width: 980px) {

@@ -182,8 +182,8 @@ div.pitch-wrapper {
 div.pitch {
   position: relative;
   height: 30vh;
-  font-size: 35px;
-  line-height: 35px;
+  font-size: 32px;
+  line-height: 32px;
   overflow: scroll;
   display: inline-block;
   padding: 0 5%;
@@ -192,9 +192,12 @@ div.pitch {
 .expand-button {
   display: block;
   position: relative;
-  margin: 10px 0 25px 0;
+  margin: -40px 0 25px 0;
+  padding-top: 40px;
   color: #808088;
   border: none;
+  background-image: linear-gradient(to top, #191a32, transparent);
+  background-image: -webkit-linear-gradient(to top, #191a32, transparent);
 }
 
 .expand-button::after {
@@ -443,6 +446,7 @@ div.o-footer__brand {
   .expand-button {
     margin: 30px 0;
     font-size: 20px;
+    background-image: none;
   }
 
   .like-button,
@@ -489,6 +493,10 @@ div.o-footer__brand {
     display: inline-block;
     width: 40px;
     height: 40px;
+  }
+
+  .expand-button {
+    background-image: none;
   }
 }
 

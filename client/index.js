@@ -95,7 +95,7 @@ likeButton.addEventListener('click', () => {
 });
 
 tweetButton.addEventListener('click', () => {
-  window.location.href = `https://twitter.com/intent/tweet?url=https://ig.ft.com/sites/future-of-britain/%23${tweetButton.value}`;
+  window.location.href = `https://twitter.com/intent/tweet?text=Here%27s%20a%20good%20idea%20from%20the%20%40FT%27s%20stack%20of%20new%20solutions%20for%20the%20future%20of%20Britain%3A&url=https://ig.ft.com/sites/future-of-britain/%23${tweetButton.value}`;
 
   window.ga('send', 'event', 'fob-tweets', tweetButton.value);
 });

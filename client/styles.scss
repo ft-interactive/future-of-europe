@@ -519,6 +519,13 @@ div.o-footer__brand {
   overflow: auto;
 }
 
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 @include oGridRespondTo(M) {
   .overlay {
     padding-top: 56px;

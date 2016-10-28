@@ -36,7 +36,7 @@ function showEntries(array) {
 
     randomButton.parentNode.replaceChild(submitOwnButton, randomButton);
 
-    submitOwnButton.innerHTML = 'Submit Your Own';
+    submitOwnButton.innerHTML = 'Submit your own';
 
     submitOwnButton.classList.remove('random-button');
 
@@ -123,7 +123,7 @@ function getStarted() {
 
   randomButton.removeEventListener('click', getStarted);
 
-  randomButton.innerHTML = 'Show Me Another';
+  randomButton.innerHTML = 'Show me another';
 
   function remove() {
     document.querySelector('.overlay').style.display = 'none';
@@ -141,8 +141,6 @@ function getStarted() {
 }
 
 // On load
-randomButton.addEventListener('click', getStarted);
-
 if (hash) {
   const hashArray = hash.split('-');
   const hashNumbers = [];
@@ -159,11 +157,19 @@ if (hash) {
     }
   });
 
+  randomButton.innerHTML = 'Show me another';
+
+  randomButton.addEventListener('click', () => {
+    showRandom();
+  });
+
   showEntries(hashNumbers);
 } else {
   const overlay = document.querySelector('.overlay');
 
   overlay.style.display = 'block';
+
+  randomButton.addEventListener('click', getStarted);
 
   showRandom();
 }

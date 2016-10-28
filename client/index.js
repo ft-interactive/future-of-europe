@@ -59,7 +59,7 @@ function showRandom() {
 
     tweetButton.style.display = 'none';
 
-    likeButton.style.display = 'block';
+    likeButton.style.display = '';
 
     viewed.push(array[0]);
 

@@ -291,7 +291,7 @@ margin-right: auto;
   padding: 0 !important;
 }
 
-.submit-button:after{
+.submit-button::after{
   content:"";
   display: block;
   background: rgba(255,255,255,0.9);

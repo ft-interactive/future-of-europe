@@ -110,29 +110,6 @@ body, .o-header__row, main {
 
 }
 
-// screen layout
-// main {
-//   height: 100vh;
-// }
-//
-// .article-head {
-//   height: 10vh;
-// }
-//
-// main {
-//   height: 90vh;
-// }
-//
-// .pitch-wrapper {
-//   height: 55vh;
-// }
-//
-// .pitch {
-//   height: 65%;
-// }
-
- // end of screen layout
-
 // FLEX BOX LAYOUT
 
 .article-head {
@@ -147,6 +124,12 @@ body, .o-header__row, main {
 .top-level-pitch {
     order: 0;
     flex: 3 1 20vh;
+    align-self: auto;
+    }
+
+  .like-button, .tweet-button {
+    order: 0;
+    flex: 0 1 auto;
     align-self: auto;
     }
 
@@ -243,15 +226,12 @@ div.pitch {
 
 .like-button {
 border: 1px solid #EB3330;
-// line-height: 40px;
 position: relative;
 background-color: #191A32;
-margin: 10px 0;
 }
 
 .like-button, .tweet-button {
-margin: 10px 0;
-display:block;
+margin: 10px 0  !important;
 margin-left: auto;
 margin-right: auto;
 }
@@ -382,11 +362,10 @@ div.tweet-text {
   color: #ECECEF;
 }
 
-
 footer.o-footer.o-footer--theme-light, .o-footer__brand {
   background-color: transparent !important;
   color: #ECECEF;
-  margin: 0;
+  margin: 20px 0 0 0;
 }
 
 div.o-footer__copyright {
@@ -399,12 +378,12 @@ small, .o-footer__legal-links > li > a {
 
 @media only screen and (min-width: 740px) {
 
-  body
-{background:url('Future of Britain illo__generator.svg')  #191a32;
+  body {
+  background:url('Future of Britain illo__generator.svg')  #191a32;
   background-size:cover;
   background-position: center;
   width:100%;
-}
+  }
 
   .o-header__top-logo{
     margin: 10px auto;
@@ -412,23 +391,50 @@ small, .o-footer__legal-links > li > a {
     position: relative;
     width: 262px;
     height: 22px;
-}
+  }
+
+  div.o-grid-row > header {
+    min-width: 100%;
+    margin: 20px 0;
+  }
 
   h1.o-typography-heading1 {
   font-size: 59px;
   line-height: 59px;
   }
 
-  div.pitch {
-  font-size: 35px;
-  line-height: 35px;
+  div.pitch-wrapper {
+    max-width: 100%;
+  }
 
-}
+  div.pitch {
+  max-width: 100%;
+  font-size: 40px;
+  line-height: 43px;
+  height: 27vh;
+  }
+
+  div.submit-button {
+      text-align: center;
+      min-width: 100%;
+      padding: 15px 0 !important;
+  }
 
   .read-more {
     min-width:100%;
   }
 
+  .like-button, .tweet-button, .random-button {
+    margin: 10px 15px !important;
+  }
+
+  footer.o-footer.o-footer--theme-light, .o-footer__brand {
+    margin: 30px 0 0 0;
+  }
+
+  div.o-footer__brand {
+    margin-top: 0;
+  }
 }
 
 @media only screen and (min-width: 980px) {
@@ -444,8 +450,6 @@ small, .o-footer__legal-links > li > a {
 }
 
 .read-more{
-  // position: absolute;
-  // bottom: 50px;
   margin: 0;
   text-align: center;
   min-width: 100%;

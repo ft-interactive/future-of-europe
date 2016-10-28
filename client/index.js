@@ -29,20 +29,6 @@ function showEntries(array) {
   } else {
     location.hash = `#${hashString}`;
   }
-
-  // Change the random button on the last pitch
-  if (viewed.length === pitchCount) {
-    const submitOwnButton = randomButton.cloneNode(true);
-
-    randomButton.parentNode.replaceChild(submitOwnButton, randomButton);
-
-    submitOwnButton.innerHTML = 'Submit your own';
-    submitOwnButton.classList.remove('random-button');
-    submitOwnButton.classList.add('submit-button');
-    submitOwnButton.addEventListener('click', () => {
-      window.location.href = 'https://ig.ft.com/sites/future-of-britain-form/';
-    });
-  }
 }
 
 function getRandomIndex(min, max) {
@@ -54,11 +40,11 @@ function showRandom() {
 
   array.push(getRandomIndex(1, pitchCount));
 
-  if (viewed.indexOf(array[0]) > -1) {
+  if (viewed.indexOf(array[0]) > -1 && viewed.length < pitchCount) {
     console.log(`${array[0]} has been viewed, re-randomising`);
 
     showRandom();
-  } else {
+  } else if (viewed.length < pitchCount) {
     viewed.forEach(n => {
       const div = document.querySelector(`div[data-index="${n}"]`);
 
@@ -78,8 +64,11 @@ function showRandom() {
     viewed.push(array[0]);
 
     randomButton.disabled = false;
+  } else {
+    // Change the random button on the last pitch
+    document.querySelector('.top-level-pitch').innerHTML = '<p>The end</p>';
 
-    console.log(viewed);
+    document.querySelector('.button-container').innerHTML = '';
   }
 }
 

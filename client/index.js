@@ -19,6 +19,17 @@ function showEntries(array) {
   div.classList.add('viewed');
   // });
 
+  // Add gradient if necessary
+  const container = div.children[0].children[0];
+  const text = container.children[0];
+  const containerHeight = container.getBoundingClientRect().height;
+  const textHeight = text.getBoundingClientRect().height - 40;
+  const tellMeMore = container.nextElementSibling;
+
+  if (textHeight > containerHeight) {
+    tellMeMore.classList.add('gradient');
+  }
+
   // Change button values
   likeButton.value = array[0];
   tweetButton.value = array[0];

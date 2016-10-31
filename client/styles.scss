@@ -156,24 +156,28 @@ h1.o-typography-heading1 {
   margin: 15px auto 0;
 }
 
-div.pitch, div.article-body > p, p.o-typography-lead {
+div.pitch-container, div.article-body > p, p.o-typography-lead {
   color: #ECECEF;
 }
 
 div.pitch-wrapper {
-  position: relative;
-  display: block;
-  text-align: center;
+  // position: relative;
+  // display: block;
+  // text-align: center;
 }
 
-div.pitch {
+div.pitch-container {
   position: relative;
-  height: 30vh;
-  font-size: 28px;
-  line-height: 30px;
+  height: 35vh;
   overflow: scroll;
   display: inline-block;
   padding: 0 5%;
+}
+
+.pitch {
+  padding-bottom: 40px;
+  font-size: 28px;
+  line-height: 30px;
 }
 
 .expand-button {
@@ -181,12 +185,15 @@ div.pitch {
   cursor: pointer;
   display: block;
   position: relative;
-  margin: -40px 0 25px 0;
-  padding-top: 40px;
+  margin: 0 0 10px;
   color: #808088;
   border: none;
-  background-image: linear-gradient(to top, #191a32, transparent);
-  background-image: -webkit-linear-gradient(to top, #191a32, transparent);
+}
+
+.expand-button.gradient {
+  margin: -50px 0 10px;
+  padding-top: 50px;
+  background: linear-gradient(to top, #191a32, #191a32 33%, rgba(25, 26, 50, 0));
 }
 
 .expand-button::after {
@@ -319,7 +326,7 @@ div.pitch {
 
 div.tweet-text {
   text-align: center;
- 
+
 }
 
 .random-button .random-icon {
@@ -397,7 +404,7 @@ div.o-footer__brand {
   margin-top: 0;
 }
 
-.o-footer__brand-logo{ 
+.o-footer__brand-logo {
  background-size: 130px !important;
  border-top:1px solid rgba(255, 255, 255, 0.5);
  padding-top: 10px;
@@ -433,7 +440,7 @@ div.o-footer__brand {
   }
 
   div.pitch-wrapper {
-    max-width: 100%;
+    // max-width: 100%;
   }
 
   div.pitch {
@@ -450,8 +457,7 @@ div.o-footer__brand {
   }
 
   .expand-button {
-    margin: 30px 0;
-    background-image: none;
+    font-size: 20px;
   }
 
   .like-button,
@@ -517,10 +523,15 @@ div.o-footer__brand {
     border-style: none;
   }
 
-
-
-  .expand-button {
-    background-image: none;
+  .read-more > a::after {
+    position: relative;
+    top: 23%;
+    left: 5px;
+    content: "";
+    background-image: url(arrow-right-white.svg);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
   }
 }
 

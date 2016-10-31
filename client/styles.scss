@@ -401,12 +401,12 @@ small,
 }
 
 div.o-footer__brand {
-  margin-top: 0;
+  border-top:1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
 }
 
 .o-footer__brand-logo {
- background-size: 130px !important;
- border-top:1px solid rgba(255, 255, 255, 0.5);
+ background-size: 162px !important;
  padding-top: 10px;
  opacity: 0.8;
 }

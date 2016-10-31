@@ -42,10 +42,10 @@ export default () => ({ // eslint-disable-line
   // ],
 
   // Appears in the HTML <title>
-  title: '',
+  title: 'A plan for Britain',
 
   // meta data
-  description: '',
+  description: '[Meta description]',
 
   /*
   TODO: Select Twitter card type -
@@ -62,8 +62,8 @@ export default () => ({ // eslint-disable-line
   */
   // General social
   // socialImage: '',
-  // socialHeadline: '',
-  // socialSummary:  '',
+  socialHeadline: '[Social headline]',
+  socialSummary: '[Social summary]',
 
   // TWITTER
   // twitterImage: '',

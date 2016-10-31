@@ -66,7 +66,7 @@ function showRandom() {
     randomButton.disabled = false;
   } else {
     // Change the random button on the last pitch
-    document.querySelector('.top-level-pitch').innerHTML = '<div class="pitch">You\'ve reached the end of the pitches.<div class="submit-button"><a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">Submit your own?</a></div></div>';
+    document.querySelector('.top-level-pitch').innerHTML = '<div class="pitch">You\'ve seen all the pitches.<div class="submit-button"><a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">Submit your own?</a></div></div>';
 
     document.querySelector('.button-container').innerHTML = '';
   }

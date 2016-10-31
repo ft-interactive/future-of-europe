@@ -151,9 +151,9 @@ body, .o-header__row, main {
 
 h1.o-typography-heading1 {
   color: #EB3330;
-  font-size: 40px;
+  font-size: 38px;
   line-height: 41px;
-  margin: 9px auto 0;
+  margin: 15px auto 0;
 }
 
 div.pitch, div.article-body > p, p.o-typography-lead {
@@ -276,7 +276,7 @@ div.pitch {
   color: #ECECEF;
   font-size: 16px;
   line-height: 16px;
-  margin: 13px 0 25px 0 !important;
+  margin: 2px 0 25px 0 !important;
   padding: 0 !important;
 }
 
@@ -530,6 +530,8 @@ div.o-footer__brand {
   h1.o-typography-heading1 {
     text-align: center;
     color: #fff;
+    font-size: 41px;
+    margin: 15px auto 0;
   }
 }
 

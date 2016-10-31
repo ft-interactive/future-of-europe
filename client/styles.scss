@@ -443,9 +443,9 @@ div.o-footer__brand {
     // max-width: 100%;
   }
 
-  div.pitch {
+ .pitch-container .pitch {
     max-width: 100%;
-    font-size: 40px;
+    font-size: 38px;
     line-height: 43px;
     height: 27vh;
   }
@@ -502,9 +502,9 @@ div.o-footer__brand {
 }
 
 @media only screen and (min-width: 980px) {
-  div.pitch {
-    font-size: 42px;
-    line-height: 44px;
+  .pitch-container .pitch {
+    font-size: 44px;
+    line-height: 46px;
   }
 
   .o-typography-body-wrapper a {

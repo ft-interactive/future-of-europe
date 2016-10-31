@@ -151,9 +151,9 @@ body, .o-header__row, main {
 
 h1.o-typography-heading1 {
   color: #EB3330;
-  font-size: 40px;
+  font-size: 38px;
   line-height: 41px;
-  margin: 9px auto 0;
+  margin: 15px auto 0;
 }
 
 div.pitch-container, div.article-body > p, p.o-typography-lead {
@@ -212,7 +212,7 @@ div.pitch-container {
 .tweet-button,
 .like-button,
 .random-button {
-  width: 220px;
+  width: 250px;
   height: 40px;
   border-radius: 4px;
   font-size: 22px;
@@ -238,7 +238,7 @@ div.pitch-container {
   background: #EB3330;
   border: none;
   z-index: 1000;
-  margin: 10px 0 0 0 !important;
+  margin: 20px 0 20px 0 !important;
 }
 
 .like-button .like-icon-empty {
@@ -285,7 +285,7 @@ div.pitch-container {
   color: #ECECEF;
   font-size: 16px;
   line-height: 16px;
-  margin: 13px 0 !important;
+  margin: 2px 0 25px 0 !important;
   padding: 0 !important;
 }
 
@@ -317,16 +317,16 @@ div.pitch-container {
   background-repeat: no-repeat;
   display: block;
   position: absolute;
-  top: 3  px;
+  top: 6px;
   left: 5px;
   width: 30px;
   height: 30px;
-  margin: 5px 5px 5px 0;
+  //margin: 5px 5px 5px 0;
 }
 
 div.tweet-text {
   text-align: center;
-  padding-top: 1px;
+
 }
 
 .random-button .random-icon {
@@ -352,22 +352,27 @@ div.tweet-text {
   font-size: 20px;
   background-color: rgba(255,255,255,0.1);
   font-weight: 500;
-  height: 63px;
-  line-height: 63px;
+  height: 45px;
+  line-height: 45px;
   border-style: none;
   color: #ECECEF;
   padding: 0 !important;
 }
 
+.read-more a {
+    top: -5%;
+    position: relative;
+}
+
 .read-more > a::after {
   position: relative;
-  top: 23%;
+  top: 22%;
   left: 5px;
   content: "";
   background-image: url(arrow-right-white.svg);
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .read-more > a,
@@ -448,7 +453,7 @@ div.o-footer__brand {
   div.submit-button {
     text-align: center;
     min-width: 100%;
-    padding: 15px 0 !important;
+    margin: 6px 0 40px 0 !important;
   }
 
   .expand-button {
@@ -459,10 +464,29 @@ div.o-footer__brand {
   .tweet-button,
   .random-button {
     margin: 10px 15px !important;
+
   }
 
   .read-more {
     min-width:100%;
+    font-size: 22px;
+    height: 63px;
+  }
+
+   .read-more a {
+    top: 0px;
+    position: relative;
+}
+
+  .read-more > a::after {
+    position: relative;
+    top: 23%;
+    left: 5px;
+    content: "";
+    background-image: url(arrow-right-white.svg);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
   }
 
   div.o-footer__copyright {
@@ -495,10 +519,8 @@ div.o-footer__brand {
     font-size: 22px;
     background-color: rgba(255,255,255,0.1);
     font-weight: 500;
-    height: 63px;
     line-height: 63px;
     border-style: none;
-    text-align: center;
   }
 
   .read-more > a::after {
@@ -533,6 +555,8 @@ div.o-footer__brand {
   h1.o-typography-heading1 {
     text-align: center;
     color: #fff;
+    font-size: 41px;
+    margin: 15px auto 0;
   }
 }
 

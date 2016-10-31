@@ -126,7 +126,8 @@ function getStarted() {
   randomButton.removeEventListener('click', getStarted);
 
   document.querySelector('.random-text').innerHTML = 'Show me another';
-  document.querySelector('.random-icon').style.backgroundImage = 'url("icons/ic_autorenew_black_24px.svg")';
+  document.querySelector('.random-icon').style.backgroundImage =
+      'url("icons/ic_autorenew_black_24px.svg")';
 
   function remove() {
     document.querySelector('.overlay').style.display = 'none';
@@ -155,13 +156,14 @@ if (hash) {
       hashNumbers.push(int);
       viewed.push(int);
     } else {
-      console.log(`${item} is not a number`);
+      console.log(`${item} is not a number, randomising`);
       showRandom();
     }
   });
 
   document.querySelector('.random-text').innerHTML = 'Show me another';
-  document.querySelector('.random-icon').style.backgroundImage = 'url("icons/ic_autorenew_black_24px.svg")';
+  document.querySelector('.random-icon').style.backgroundImage =
+      'url("icons/ic_autorenew_black_24px.svg")';
 
   randomButton.addEventListener('click', () => {
     randomButton.disabled = true;

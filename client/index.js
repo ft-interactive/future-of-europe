@@ -1,5 +1,7 @@
 const pitchCount = parseInt(document.querySelector('div[data-pitch-count]').dataset.pitchCount, 10);
 const viewed = [];
+const expandButton = document.querySelector('.expand-button');
+const closeExpandButton = document.querySelector('.close-button i');
 const likeButton = document.querySelector('.like-button');
 const tweetButton = document.querySelector('.tweet-button');
 const randomButton = document.querySelector('.random-button');
@@ -31,6 +33,7 @@ function showEntries(array) {
   }
 
   // Change button values
+  expandButton.dataset.index = array[0];
   likeButton.value = array[0];
   tweetButton.value = array[0];
 
@@ -82,6 +85,35 @@ function showRandom() {
     document.querySelector('.button-container').innerHTML = '';
   }
 }
+
+expandButton.addEventListener('click', () => {
+  const overlay = document.querySelector('.read-more-overlay');
+  const pitches = JSON.parse(document.getElementById('pitches').textContent);
+  const ids = pitches.map(pitch => pitch.id);
+  const pitchIndex = ids.indexOf(parseInt(expandButton.dataset.index, 10));
+  const content = overlay.querySelector('.content');
+  const name = overlay.querySelector('.name');
+  const title = overlay.querySelector('.title');
+
+  content.innerHTML = `<p>${pitches[pitchIndex].readmore}</p>`;
+  name.innerHTML = `${pitches[pitchIndex].name}`;
+  title.innerHTML = `${pitches[pitchIndex].jobtitle}`;
+
+  overlay.style.display = 'block';
+
+  closeExpandButton.addEventListener('click', () => {
+    overlay.scrollTop = 0;
+    overlay.style.display = 'none';
+  });
+
+  // Escape to close overlay
+  document.addEventListener('keydown', event => {
+    if (event.keyCode === 27) {
+      overlay.scrollTop = 0;
+      overlay.style.display = 'none';
+    }
+  });
+});
 
 likeButton.addEventListener('click', () => {
   let switchButton = {};

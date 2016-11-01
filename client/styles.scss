@@ -593,6 +593,7 @@ div.o-footer__brand {
 }
 
 .read-more-overlay {
+  display: none;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -624,7 +625,7 @@ div.o-footer__brand {
     color: white;
     padding: 122px 0 80px;
     text-align: left;
-    > p {
+    > .content p {
       font: normal 20px/27px MetricWeb, sans-serif;
       line-height: 27px;
       color: #ececef;
@@ -633,7 +634,7 @@ div.o-footer__brand {
     > .name {
       font: normal 20px/27px MetricWeb, sans-serif;
       color: #eb3330;
-    } 
+    }
     > .title {
       font: normal 20px/20px MetricWeb, sans-serif;
       color: rgba(255,255,255,0.5);

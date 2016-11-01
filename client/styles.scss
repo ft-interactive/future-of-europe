@@ -96,6 +96,15 @@ body, .o-header__row, main {
   text-align: center;
 }
 
+ .overlay .instruction {
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    font-size: 35px !important;
+    line-height: 38px !important;
+    margin: 72px auto 0 !important;
+  }
+
 .article-body > :not(.graphic){
   margin: 0 auto;
 }
@@ -498,6 +507,15 @@ div.o-footer__brand {
  background-size: 163px !important;
 }
 
+ .overlay .instruction {
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    font-size: 58px !important;
+    line-height: 63px !important;
+    margin: 72px auto 0;
+  }
+
 
 }
 
@@ -534,7 +552,12 @@ div.o-footer__brand {
     height: 40px;
   }
 
-}
+
+
+
+}//end of min-width: 980px
+
+
 
 .o-footer__container{
   margin-left: 0 !important;
@@ -560,15 +583,17 @@ div.o-footer__brand {
     overflow: scroll;
   }
   
-  h1.o-typography-heading1 {
+ .overlay .instruction {
     font-weight: 600;
     text-align: center;
     color: #fff;
-    font-size: 58px;
+    font-size: 58px !important;
     line-height: 63px;
     margin: 122px auto 0;
   }
 }
+
+
 
 .behind-overlay {
   height: 100%;

@@ -582,7 +582,6 @@ div.o-footer__brand {
     height: 100%;
     overflow: scroll;
   }
-  
  .overlay .instruction {
     font-weight: 600;
     text-align: center;
@@ -593,7 +592,57 @@ div.o-footer__brand {
   }
 }
 
-
+.read-more-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1001;
+  background-color: #191a32;
+  overflow: auto;
+  .close-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    z-index: 1002;
+    background: linear-gradient(#191a32, #191a32 67%, rgba(25, 26, 50, 0));
+    > i {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 25px;
+      height: 25px;
+      margin: 5px;
+      background-image: url("icons/ic_clear_black_24px.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  .read-more-content {
+    padding: 42px 0 80px;
+    text-align: left;
+    > p {
+      color: #ececef;
+    }
+    > .name {
+      color: #eb3330;
+    }
+    > .title {
+      color: #808088;
+    }
+  }
+  .read-more-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    z-index: 1002;
+    background: linear-gradient(to top, #191a32, #191a32 33%, rgba(25, 26, 50, 0));
+  }
+}
 
 .behind-overlay {
   height: 100%;

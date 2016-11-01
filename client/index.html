@@ -5,7 +5,6 @@
     <div class="pitch-container">
       <span class="pitch">{{ submission.pitch }}</span>
     </div>
-    <div class="expand-button">Tell me more</div>
   </div>
 {% endmacro %}
 
@@ -16,6 +15,7 @@
         {{ PitchRandomizer(pitch) }}
       </div>
     {% endfor %}
+    <div class="expand-button" data-index="">Tell me more</div>
   </div>
 
   <div class="button-container">

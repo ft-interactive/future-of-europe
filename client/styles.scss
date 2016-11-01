@@ -593,6 +593,7 @@ div.o-footer__brand {
 }
 
 .read-more-overlay {
+  display: none;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -623,7 +624,7 @@ div.o-footer__brand {
   .read-more-content {
     padding: 42px 0 80px;
     text-align: left;
-    > p {
+    > .content p {
       color: #ececef;
     }
     > .name {

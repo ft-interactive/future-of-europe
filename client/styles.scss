@@ -601,7 +601,8 @@ div.o-footer__brand {
   bottom: 0px;
   z-index: 1001;
   background-color: #191a32;
-  overflow: auto;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
   .close-button {
     position: fixed;
     top: 0;

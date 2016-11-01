@@ -604,7 +604,6 @@ div.o-footer__brand {
   overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
   .close-button {
-    cursor: pointer;
     position: fixed;
     top: 0;
     left: 0;
@@ -622,6 +621,7 @@ div.o-footer__brand {
       margin: 5px;
       background-image: url("icons/ic_clear_black_24px.svg");
       background-repeat: no-repeat;
+      cursor: pointer;
     }
   }
   .read-more-content  {

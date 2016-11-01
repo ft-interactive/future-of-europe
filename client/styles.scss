@@ -613,25 +613,31 @@ div.o-footer__brand {
     > i {
       position: absolute;
       top: 0;
-      right: 0;
-      width: 25px;
-      height: 25px;
+      left: 10px;
+      width: 30px;
+      height: 30px;
       margin: 5px;
       background-image: url("icons/ic_clear_black_24px.svg");
       background-repeat: no-repeat;
     }
   }
-  .read-more-content {
-    padding: 42px 0 80px;
+  .read-more-content  {
+    color: white;
+    padding: 122px 0 80px;
     text-align: left;
     > .content p {
+      font: normal 20px/27px MetricWeb, sans-serif;
+      line-height: 27px;
       color: #ececef;
+      opacity: .9;
     }
     > .name {
+      font: normal 20px/27px MetricWeb, sans-serif;
       color: #eb3330;
     }
     > .title {
-      color: #808088;
+      font: normal 20px/20px MetricWeb, sans-serif;
+      color: rgba(255,255,255,0.5);
     }
   }
   .read-more-footer {

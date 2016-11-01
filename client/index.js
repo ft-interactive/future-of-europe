@@ -100,6 +100,7 @@ expandButton.addEventListener('click', () => {
   title.innerHTML = `${pitches[pitchIndex].jobtitle}`;
 
   overlay.style.display = 'block';
+  overlay.scrollTop = 0;
 
   closeExpandButton.addEventListener('click', () => {
     overlay.style.display = 'none';

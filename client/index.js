@@ -155,7 +155,7 @@ tweetButton.addEventListener('click', () => {
 function getStarted() {
   let removeIntro = {};
 
-  randomButton.removeEventListener('click', getStarted);
+  this.removeEventListener('click', getStarted);
 
   document.querySelector('.random-text').innerHTML = 'Show me another';
   document.querySelector('.random-icon').style.backgroundImage =
@@ -171,9 +171,13 @@ function getStarted() {
 
   document.querySelector('.overlay').style.opacity = 0;
 
-  randomButton.addEventListener('click', () => {
+  this.addEventListener('click', () => {
     showRandom();
   });
+}
+
+function preventTouchMove(element) {
+  element.preventDefault();
 }
 
 // On load
@@ -209,7 +213,9 @@ if (hash) {
 
   overlay.style.display = 'block';
 
-  randomButton.addEventListener('click', getStarted);
+  overlay.addEventListener('touchmove', preventTouchMove, false);
+  randomButton.addEventListener('touchmove', preventTouchMove, false);
+  randomButton.addEventListener('click', getStarted, false);
 
   showRandom();
 }

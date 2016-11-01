@@ -604,8 +604,9 @@ div.o-footer__brand {
   overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
   .close-button {
+    cursor: pointer;
     position: fixed;
-    top: 0;
+    top: 10px;
     left: 0;
     width: 100%;
     height: 52px;
@@ -613,8 +614,9 @@ div.o-footer__brand {
     background: linear-gradient(#191a32, #191a32 67%, rgba(25, 26, 50, 0));
     > i {
       position: absolute;
+      background-size: 30px;
       top: 0;
-      left: 10px;
+      right: 10px;
       width: 30px;
       height: 30px;
       margin: 5px;
@@ -624,7 +626,7 @@ div.o-footer__brand {
   }
   .read-more-content  {
     color: white;
-    padding: 122px 0 80px;
+    padding: 72px 0 80px;
     text-align: left;
     > .content p {
       font: normal 20px/27px MetricWeb, sans-serif;

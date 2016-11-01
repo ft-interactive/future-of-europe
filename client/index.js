@@ -105,6 +105,14 @@ expandButton.addEventListener('click', () => {
     overlay.scrollTop = 0;
     overlay.style.display = 'none';
   });
+
+  // Escape to close overlay
+  document.addEventListener('keydown', event => {
+    if (event.keyCode === 27) {
+      overlay.scrollTop = 0;
+      overlay.style.display = 'none';
+    }
+  });
 });
 
 likeButton.addEventListener('click', () => {

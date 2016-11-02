@@ -611,14 +611,13 @@ div.o-footer__brand {
     height: 8.75vh;
     z-index: 1002;
     background: linear-gradient(#191a32, #191a32 25%, rgba(25, 26, 50, 0));
-    > i {
+    i.close {
       position: absolute;
       background-size: 30px;
-      top: 0;
-      right: 10px;
+      right: 0;
+      bottom: 0;
       width: 30px;
       height: 30px;
-      margin: 5px;
       background-image: url("icons/ic_clear_black_24px.svg");
       background-repeat: no-repeat;
       cursor: pointer;

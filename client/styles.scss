@@ -608,9 +608,9 @@ div.o-footer__brand {
     top: 0;
     left: 0;
     width: 100%;
-    height: 52px;
+    height: 8.75vh;
     z-index: 1002;
-    background: linear-gradient(#191a32, #191a32 67%, rgba(25, 26, 50, 0));
+    background: linear-gradient(#191a32, #191a32 25%, rgba(25, 26, 50, 0));
     > i {
       position: absolute;
       background-size: 30px;
@@ -626,7 +626,7 @@ div.o-footer__brand {
   }
   .read-more-content  {
     color: white;
-    padding: 55px 0 80px;
+    padding: 8.75vh 0 8.75vh;
     text-align: left;
     > .content p {
       font: normal 20px/27px MetricWeb, sans-serif;
@@ -648,9 +648,9 @@ div.o-footer__brand {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 52px;
+    height: 8.75vh;
     z-index: 1002;
-    background: linear-gradient(to top, #191a32, #191a32 33%, rgba(25, 26, 50, 0));
+    background: linear-gradient(to top, #191a32, #191a32 25%, rgba(25, 26, 50, 0));
   }
 }
 

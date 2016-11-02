@@ -424,7 +424,7 @@ div.o-footer__brand {
 
 @media only screen and (min-width: 740px) {
   body {
-    background: url('Future of Britain illo__generator.svg') #191a32;
+    background: url('future-of-britain-illo__generator.svg') #191a32;
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -608,17 +608,16 @@ div.o-footer__brand {
     top: 0;
     left: 0;
     width: 100%;
-    height: 52px;
+    height: 8.75vh;
     z-index: 1002;
-    background: linear-gradient(#191a32, #191a32 67%, rgba(25, 26, 50, 0));
-    > i {
+    background: linear-gradient(#191a32, #191a32 25%, rgba(25, 26, 50, 0));
+    i.close {
       position: absolute;
       background-size: 30px;
-      top: 0;
-      right: 10px;
+      right: 0;
+      bottom: 0;
       width: 30px;
       height: 30px;
-      margin: 5px;
       background-image: url("icons/ic_clear_black_24px.svg");
       background-repeat: no-repeat;
       cursor: pointer;
@@ -626,7 +625,7 @@ div.o-footer__brand {
   }
   .read-more-content  {
     color: white;
-    padding: 55px 0 80px;
+    padding: 8.75vh 0 8.75vh;
     text-align: left;
     > .content p {
       font: normal 20px/27px MetricWeb, sans-serif;
@@ -648,9 +647,9 @@ div.o-footer__brand {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 52px;
+    height: 8.75vh;
     z-index: 1002;
-    background: linear-gradient(to top, #191a32, #191a32 33%, rgba(25, 26, 50, 0));
+    background: linear-gradient(to top, #191a32, #191a32 25%, rgba(25, 26, 50, 0));
   }
 }
 

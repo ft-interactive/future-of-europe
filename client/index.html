@@ -3,7 +3,7 @@
 {% macro PitchRandomizer(submission) %}
   <div class="pitch-wrapper">
     <div class="pitch-container">
-      <span class="pitch">{{ submission.pitch }}</span>
+      <span class="pitch">{{ submission.pitch | safe }}</span>
     </div>
   </div>
 {% endmacro %}

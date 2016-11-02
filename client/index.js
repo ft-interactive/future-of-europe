@@ -82,7 +82,7 @@ function showRandom() {
     randomButton.disabled = false;
   } else {
     // Change the random button on the last pitch
-    document.querySelector('.top-level-pitch').innerHTML = '<div class="pitch">You\'ve seen all the pitches.<div class="submit-button"><a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">Submit your own?</a></div></div>';
+    document.querySelector('.top-level-pitch').innerHTML = '<div class="pitch-wrapper"><div class="pitch-container"><span class="pitch">You\'ve seen all the pitches.</span><div class="submit-button"><a href="https://ig.ft.com/sites/future-of-britain-form/" target="_blank">Submit your own?</a></div></div></div>';
 
     document.querySelector('.button-container').innerHTML = '';
   }
@@ -97,7 +97,7 @@ expandButton.addEventListener('click', () => {
   const name = overlay.querySelector('.name');
   const title = overlay.querySelector('.title');
 
-  content.innerHTML = `<p>${pitches[pitchIndex].readmore}</p>`;
+  content.innerHTML = `${pitches[pitchIndex].readmore}`;
   name.innerHTML = `${pitches[pitchIndex].name}`;
   title.innerHTML = `${pitches[pitchIndex].jobtitle}`;
 

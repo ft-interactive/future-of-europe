@@ -14,10 +14,16 @@
       {% include "includes/analytics.html" %}
     {% endif %}
 
-    <div class="overlay">
+    <div class="intro-overlay">
       <div class="o-grid-row o-typography-body-wrapper">
         <div data-o-grid-colspan="10 M8 L6 XL5 center">
           <h1 class="o-typography-heading1 instruction">Click through our stack of reader ideas for the future of Britain.</h1>
+          <!-- <div class="start-button-container">
+            <button class="start-button unselectable">
+              <span class="start-icon"></span>
+              <div class="start-text">Get started</div>
+            </button>
+          </div> -->
         </div>
       </div>
     </div>
@@ -34,22 +40,22 @@
           <h3 class="name"></h3>
           <h3 class="title"></h3>
           <hr class="divider">
-          <div class="content"></div>
+          <div class="text"></div>
         </div>
 
         <div class="read-more-footer"></div>
       </div>
     </div>
 
-    <div class="behind-overlay">
+    <!-- <div class="behind-overlay"> -->
       {% if flags.header %}
         {% include "includes/header.html" %}
       {% endif %}
 
       <main role="main">
         <article class="article" itemscope itemtype="http://schema.org/Article">
-          <div class="article-head o-grid-container">
-            <div class="o-grid-row">
+          <div class="article-head o-grid-container" style="width: 100%">
+            <div class="o-grid-row" style="width: 100%">
               <header data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
 
                 {% block article_head %}
@@ -83,7 +89,7 @@
       {% if flags.footer %}
         {% include "includes/footer.html" %}
       {% endif %}
-    </div>
+    <!-- </div> -->
 
     <script async>queue('https://origami-build.ft.com/v2/bundles/js?export=oFooter&modules=o-footer@^5.0.1', null, true)</script>
 

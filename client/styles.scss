@@ -683,15 +683,15 @@ div.o-footer__brand {
     top: 0;
     left: 0;
     width: 100%;
-    height: 8.75vh;
-    max-height: 55px;
+    height: 12.917vh;
+    max-height: 62px;
     z-index: 1002;
-    background: linear-gradient(#191a32, #191a32 25%, rgba(25, 26, 50, 0));
+    background: linear-gradient(#191a32, #191a32 67%, rgba(25, 26, 50, 0));
     i.close {
       position: absolute;
       background-size: 30px;
       right: 0;
-      bottom: 0;
+      bottom: 16px;
       width: 30px;
       height: 30px;
       background-image: url("icons/ic_clear_black_24px.svg");
@@ -723,10 +723,10 @@ div.o-footer__brand {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 8.75vh;
-    max-height: 55px;
+    height: 12.917vh;
+    max-height: 62px;
     z-index: 1002;
-    background: linear-gradient(to top, #191a32, #191a32 25%, rgba(25, 26, 50, 0));
+    background: linear-gradient(to top, #191a32, #191a32 50%, rgba(25, 26, 50, 0));
   }
 }
 

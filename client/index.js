@@ -96,14 +96,21 @@ expandButton.addEventListener('click', () => {
   const content = overlay.querySelector('.text');
   const name = overlay.querySelector('.name');
   const title = overlay.querySelector('.title');
+  const body = document.querySelector('body');
+  const footer = document.querySelector('footer');
+
+  body.style.overflow = 'hidden';
 
   content.innerHTML = `${pitches[pitchIndex].readmore}`;
   name.innerHTML = `${pitches[pitchIndex].name}`;
   title.innerHTML = `${pitches[pitchIndex].jobtitle}`;
 
   overlay.style.display = 'block';
+  footer.style.display = 'none';
 
   closeExpandButton.addEventListener('click', () => {
+    body.style.overflow = '';
+    footer.style.display = '';
     overlay.scrollTop = 0;
     overlay.style.display = 'none';
   });
@@ -111,6 +118,9 @@ expandButton.addEventListener('click', () => {
   // Escape to close overlay
   document.addEventListener('keydown', event => {
     if (event.keyCode === 27) {
+      // body.scrollTop = 0;
+      body.style.overflow = '';
+      footer.style.display = '';
       overlay.scrollTop = 0;
       overlay.style.display = 'none';
     }

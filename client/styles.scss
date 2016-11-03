@@ -400,6 +400,7 @@ div.tweet-text {
   margin: 50px 0 10px !important;
   text-align: center;
   width: 100%;
+  max-width: none !important;
   font-size: 20px;
   background-color: rgba(255,255,255,0.1);
   font-weight: 500;
@@ -531,7 +532,7 @@ div.o-footer__brand {
   }
 
   .read-more {
-    min-width:100%;
+    width:100%;
     font-size: 22px;
     height: 63px;
     // margin: 20px 0 10px !important;

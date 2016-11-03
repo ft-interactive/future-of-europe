@@ -697,6 +697,13 @@ div.o-footer__brand {
       font: normal 20px/20px MetricWeb, sans-serif;
       color: rgba(255,255,255,0.5);
     }
+    .divider{
+    display: block;
+    position: relative;
+    margin: 15px 0 20px 0;
+    width: 40px;
+    opacity: .5;
+    }
   }
   .read-more-footer {
     position: fixed;

@@ -93,7 +93,7 @@ expandButton.addEventListener('click', () => {
   const pitches = JSON.parse(document.getElementById('pitches').textContent);
   const ids = pitches.map(pitch => pitch.id);
   const pitchIndex = ids.indexOf(parseInt(expandButton.dataset.index, 10));
-  const content = overlay.querySelector('.content');
+  const content = overlay.querySelector('.text');
   const name = overlay.querySelector('.name');
   const title = overlay.querySelector('.title');
 
@@ -164,14 +164,14 @@ function getStarted() {
       'url("icons/ic_autorenew_black_24px.svg")';
 
   function remove() {
-    document.querySelector('.overlay').style.display = 'none';
+    document.querySelector('.intro-overlay').style.display = 'none';
 
     clearInterval(removeIntro);
   }
 
   removeIntro = setInterval(remove, 100);
 
-  document.querySelector('.overlay').style.opacity = 0;
+  document.querySelector('.intro-overlay').style.opacity = 0;
 
   this.addEventListener('click', () => {
     showRandom();
@@ -211,7 +211,7 @@ if (hash) {
 
   showEntries(hashNumbers);
 } else {
-  const overlay = document.querySelector('.overlay');
+  const overlay = document.querySelector('.intro-overlay');
 
   overlay.style.display = 'block';
 

@@ -96,7 +96,7 @@ body, .o-header__row, main {
   text-align: center;
 }
 
- .overlay .instruction {
+ .intro-overlay .instruction {
     font-weight: 600;
     text-align: center;
     color: #fff;
@@ -220,7 +220,8 @@ div.pitch-container {
 
 .tweet-button,
 .like-button,
-.random-button {
+.random-button,
+.start-button {
   width: 250px;
   height: 40px;
   border-radius: 4px;
@@ -242,7 +243,7 @@ div.pitch-container {
   margin-right: auto;
 }
 
-.random-button {
+.random-button, .start-button {
   position: relative;
   background: #EB3330;
   border: none;
@@ -348,6 +349,23 @@ div.tweet-text {
   width: 25px;
   height: 25px;
   margin: 5px;
+}
+
+.start-button-container {
+  position: absolute;
+  width: 100%;
+  // padding-top: 26.5vh;
+  .start-button .start-icon {
+    background-image: url("icons/arrow-right-blue.svg");
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+  }
 }
 
 .card {
@@ -507,7 +525,7 @@ div.o-footer__brand {
  background-size: 163px !important;
 }
 
- .overlay .instruction {
+ .intro-overlay .instruction {
     font-weight: 600;
     text-align: center;
     color: #fff;
@@ -565,7 +583,7 @@ div.o-footer__brand {
   max-width: 2000px !important;
 }
 
-.overlay {
+.intro-overlay {
   display: none;
   position: fixed;
   top: 0px;
@@ -578,18 +596,19 @@ div.o-footer__brand {
   -webkit-backdrop-filter: blur(8px);
   transition: opacity linear 100ms;
   -webkit-transition: opacity linear 100ms;
-  .overlay-content {
-    height: 100%;
-    overflow: auto;
-  }
- .overlay .instruction {
-    font-weight: 600;
-    text-align: center;
-    color: #fff;
-    font-size: 58px !important;
-    line-height: 63px;
-    margin: 122px auto 0;
-  }
+  // .intro-content {
+  //   height: 100%;
+  //   overflow: auto;
+  // }
+}
+
+.instruction {
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  font-size: 58px !important;
+  line-height: 63px;
+  margin: 122px auto 0;
 }
 
 .read-more-overlay {
@@ -627,7 +646,7 @@ div.o-footer__brand {
     color: white;
     padding: 8.75vh 0 8.75vh;
     text-align: left;
-    > .content p {
+    > .text p {
       font: normal 20px/27px MetricWeb, sans-serif;
       line-height: 27px;
       color: #ececef;
@@ -666,7 +685,7 @@ div.o-footer__brand {
 }
 
 @include oGridRespondTo(M) {
-  .overlay {
+  .intro-overlay {
     padding-top: 56px;
   }
 }

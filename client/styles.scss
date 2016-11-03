@@ -192,7 +192,7 @@ div.pitch-container.end{
   cursor: pointer;
   display: block;
   position: relative;
-  margin: 0 0 25px;
+  margin: 0 0 30px;
   color: #808088;
   border: none;
 }
@@ -245,7 +245,7 @@ div.pitch-container.end{
   background: #EB3330;
   border: none;
   z-index: 1000;
-  margin: 20px 0 20px 0 !important;
+  margin: 30px 0 20px 0 !important;
 }
 
 .like-button .like-icon-empty {
@@ -397,7 +397,7 @@ div.tweet-text {
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
-  margin: 50px 0 10px !important;
+  margin: 30px 0 10px !important;
   text-align: center;
   width: 100%;
   max-width: none !important;
@@ -669,11 +669,11 @@ div.o-footer__brand {
     background: linear-gradient(#191a32, #191a32 25%, rgba(25, 26, 50, 0));
     i.close {
       position: absolute;
-      background-size: 30px;
+      background-size: 35px;
       right: 0;
       bottom: 0;
-      width: 30px;
-      height: 30px;
+      width: 35px;
+      height: 35px;
       background-image: url("icons/ic_clear_black_24px.svg");
       background-repeat: no-repeat;
       cursor: pointer;

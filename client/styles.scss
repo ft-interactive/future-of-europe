@@ -138,14 +138,6 @@ body, .o-header__row, main {
     align-self: auto;
     }
 
-
-
-.read-more {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    }
-
 // END FLEX BOX
 
 .article-head {
@@ -402,7 +394,10 @@ div.tweet-text {
 }
 
 .read-more {
-  margin: 10px 0;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin: 50px 0 10px !important;
   text-align: center;
   width: 100%;
   font-size: 20px;
@@ -539,6 +534,7 @@ div.o-footer__brand {
     min-width:100%;
     font-size: 22px;
     height: 63px;
+    // margin: 20px 0 10px !important;
   }
 
    .read-more a {
@@ -590,7 +586,7 @@ div.o-footer__brand {
   }
 
   .read-more {
-    margin: 0;
+    // margin: 50px 0 10px !important;
     text-align: center;
     min-width: 100%;
     font-size: 22px;

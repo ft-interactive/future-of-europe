@@ -675,7 +675,7 @@ div.o-footer__brand {
   min-height: 100vh;
   z-index: 1001;
   background-color: #191a32;
-  overflow-y: scroll; /* has to be scroll, not auto */
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   .close-button {
     position: fixed;
@@ -735,11 +735,6 @@ div.o-footer__brand {
     background: linear-gradient(to top, #191a32, #191a32 25%, rgba(25, 26, 50, 0));
   }
 }
-
-// .behind-overlay {
-//   height: 100%;
-//   overflow: auto;
-// }
 
 .unselectable {
   -moz-user-select: none;

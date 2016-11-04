@@ -68,8 +68,8 @@ export default () => ({ // eslint-disable-line
   // TWITTER
   twitterImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=1024&fit=cover&format=auto&quality=high',
   twitterCreator: '@FT',
-  tweetText: 'We asked you to brainstorm solutions for the future of Britain. Here are some of the most compelling.',
-  twitterHeadline: 'Browse our readers’ ideas for guiding Britain through Brexit',
+  tweetText: 'We asked you to brainstorm solutions for the future of Britain. Here are some of the most compelling',
+  twitterHeadline: 'Browse your ideas for guiding Britain through Brexit',
 
   // FACEBOOK
   facebookImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=1200&fit=cover&format=auto&quality=high',

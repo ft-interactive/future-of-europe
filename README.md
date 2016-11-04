@@ -1,4 +1,4 @@
-# [future-of-britain](https://ig.ft.com/sites/future-of-britain)
+# [future-of-britain](https://ig.ft.com/future-of-britain)
 
 > Elevator pitch generator
 

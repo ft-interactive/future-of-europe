@@ -165,7 +165,10 @@ tweetButton.addEventListener('click', () => {
 // });
 
 function getStarted() {
+  const body = document.querySelector('body');
   let removeIntro = {};
+
+  body.style.overflow = '';
 
   this.removeEventListener('click', getStarted);
 
@@ -221,7 +224,10 @@ if (hash) {
 
   showEntries(hashNumbers);
 } else {
+  const body = document.querySelector('body');
   const overlay = document.querySelector('.intro-overlay');
+
+  body.style.overflow = 'hidden';
 
   overlay.style.display = 'block';
 

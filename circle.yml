@@ -16,7 +16,7 @@ dependencies:
 
 test:
   post:
-    - npm run preflight
+    - echo "skip"
 
 deployment:
   s3: # this is just a custom name, could be anything

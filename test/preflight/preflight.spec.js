@@ -190,12 +190,12 @@ module.exports = {
   //     .text.to.not.equal('');
   // },
 
-  'Headline should be populated': client => {
-    client.expect.element('h1.o-typography-heading1')
-      .to.be.present;
-    client.expect.element('h1.o-typography-heading1')
-      .text.to.not.equal('');
-  },
+  // 'Headline should be populated': client => {
+  //   client.expect.element('h1.o-typography-heading1')
+  //     .to.be.present;
+  //   client.expect.element('h1.o-typography-heading1')
+  //     .text.to.not.equal('');
+  // },
 
   'If optional related article tag is present, check it is defined': client => {
     client.perform(done => {

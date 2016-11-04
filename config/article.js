@@ -29,7 +29,7 @@ export default () => ({ // eslint-disable-line
   mainImage: {
     title: 'Readers\' ideas for guiding Britain through Brexit',
     description: '',
-    url: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A802a9e6c-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A802a9e6c-9554-11e6-a1dc-bdf38d484582&source=ig&width=2048&fit=cover&format=auto&quality=medium',
+    url: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=2048&fit=cover&format=auto&quality=high',
     width: 2048, // ensure correct width
     height: 1152, // ensure correct height
   },

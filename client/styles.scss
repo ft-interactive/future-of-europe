@@ -102,7 +102,7 @@ body, .o-header__row, main {
     color: #fff;
     font-size: 35px !important;
     line-height: 38px !important;
-    margin: 72px auto 0 !important;
+    margin: 59px auto 0;
   }
 
 .article-body > :not(.graphic){
@@ -587,10 +587,8 @@ div.o-footer__brand {
     color: #fff;
     font-size: 58px !important;
     line-height: 63px !important;
-    margin: 72px auto 0;
+    margin: 87px auto 0;
   }
-
-
 }
 
 @media only screen and (min-width: 980px) {
@@ -654,7 +652,7 @@ div.o-footer__brand {
   -webkit-transition: opacity linear 100ms;
   overflow: hidden;
   .o-grid-row {
-    padding-top: 42px;
+    // padding-top: 42px;
   }
 }
 
@@ -664,7 +662,7 @@ div.o-footer__brand {
   color: #fff;
   font-size: 58px !important;
   line-height: 63px;
-  margin: 122px auto 0;
+  // margin: 122px auto 0;
 }
 
 .read-more-overlay {
@@ -745,6 +743,6 @@ div.o-footer__brand {
 
 @include oGridRespondTo(M) {
   .intro-overlay .o-grid-row {
-    padding-top: 56px;
+    // padding-top: 56px;
   }
 }

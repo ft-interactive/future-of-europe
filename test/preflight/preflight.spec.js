@@ -157,38 +157,38 @@ module.exports = {
   //   );
   // },
 
-  'Sharing should be present': client => {
-    client.expect.element('.o-share').to.be.present;
-  },
+  // 'Sharing should be present': client => {
+  //   client.expect.element('.o-share').to.be.present;
+  // },
 
-  'Sharing "links" attribute should be present': client => {
-    client.expect.element('.o-share')
-      .to.have.attribute('data-o-share-links').not.equal('');
-  },
+  // 'Sharing "links" attribute should be present': client => {
+  //   client.expect.element('.o-share')
+  //     .to.have.attribute('data-o-share-links').not.equal('');
+  // },
 
-  'Sharing "url" attribute should be present': client => {
-    client.expect.element('.o-share')
-      .to.have.attribute('data-o-share-url').not.equal('');
-  },
+  // 'Sharing "url" attribute should be present': client => {
+  //   client.expect.element('.o-share')
+  //     .to.have.attribute('data-o-share-url').not.equal('');
+  // },
 
-  'Sharing "title" attribute should be present': client => {
-    client.expect.element('.o-share')
-      .to.have.attribute('data-o-share-title').not.equal('');
-  },
+  // 'Sharing "title" attribute should be present': client => {
+  //   client.expect.element('.o-share')
+  //     .to.have.attribute('data-o-share-title').not.equal('');
+  // },
 
-  'Sharing "summary" attribute should be present': client => {
-    client.expect.element('.o-share')
-      .to.have.attribute('data-o-share-summary').not.equal('');
-  },
+  // 'Sharing "summary" attribute should be present': client => {
+  //   client.expect.element('.o-share')
+  //     .to.have.attribute('data-o-share-summary').not.equal('');
+  // },
 
-  'Topic link should be populated': client => {
-    client.expect.element('.o-typography-link-topic').to.be.present;
-    client.expect.element('.o-typography-link-topic')
-      .to.have.attribute('href').not.equal('');
-
-    client.expect.element('.o-typography-link-topic')
-      .text.to.not.equal('');
-  },
+  // 'Topic link should be populated': client => {
+  //   client.expect.element('.o-typography-link-topic').to.be.present;
+  //   client.expect.element('.o-typography-link-topic')
+  //     .to.have.attribute('href').not.equal('');
+  //
+  //   client.expect.element('.o-typography-link-topic')
+  //     .text.to.not.equal('');
+  // },
 
   'Headline should be populated': client => {
     client.expect.element('h1.o-typography-heading1')

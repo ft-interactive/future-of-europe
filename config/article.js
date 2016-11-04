@@ -27,9 +27,9 @@ export default () => ({ // eslint-disable-line
   // },
 
   mainImage: {
-    title: '',
+    title: 'Readers\' ideas for guiding Britain through Brexit',
     description: '',
-    url: '',
+    url: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A802a9e6c-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A802a9e6c-9554-11e6-a1dc-bdf38d484582&source=ig&width=2048&fit=cover&format=auto&quality=medium',
     width: 2048, // ensure correct width
     height: 1152, // ensure correct height
   },
@@ -45,7 +45,7 @@ export default () => ({ // eslint-disable-line
   title: 'A plan for Britain',
 
   // meta data
-  description: '[Meta description]',
+  description: 'What is the best relationship for the UK and the EU? How should the UK deal with immigration? FT readers share ideas for Britain post-Brexit.',
 
   /*
   TODO: Select Twitter card type -
@@ -61,19 +61,19 @@ export default () => ({ // eslint-disable-line
         optional social meta data?
   */
   // General social
-  // socialImage: '',
-  socialHeadline: '[Social headline]',
-  socialSummary: '[Social summary]',
+  socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=1200&fit=cover&format=auto&quality=high',
+  socialHeadline: 'Browse our collection of reader ideas for guiding Britain through Brexit',
+  socialSummary: 'We asked you to brainstorm solutions for the future of Britain. Here are some of the most compelling.',
 
   // TWITTER
-  // twitterImage: '',
-  // twitterCreator: '@individual's_account',
-  // tweetText:  '',
-  // twitterHeadline:  '',
+  twitterImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=1024&fit=cover&format=auto&quality=high',
+  twitterCreator: '@FT',
+  tweetText: 'We asked you to brainstorm solutions for the future of Britain. Here are some of the most compelling.',
+  twitterHeadline: 'Browse our readers’ ideas for guiding Britain through Brexit',
 
   // FACEBOOK
-  // facebookImage: '',
-  // facebookHeadline: '',
+  facebookImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=1200&fit=cover&format=auto&quality=high',
+  facebookHeadline: 'Browse our collection of reader ideas for guiding Britain through Brexit',
 
   tracking: {
 

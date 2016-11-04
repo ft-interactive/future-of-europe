@@ -643,20 +643,19 @@ div.o-footer__brand {
   display: none;
   position: fixed;
   top: 0px;
-  // bottom: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
   height: 100vh;
   z-index: 999;
-  padding-top: 42px;
   background-color: rgba(25, 26, 50, 0.9);;
   -webkit-backdrop-filter: blur(8px);
   transition: opacity linear 100ms;
   -webkit-transition: opacity linear 100ms;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  // .intro-content {
-  //   height: 100%;
-  //   overflow: auto;
-  // }
+  overflow: hidden;
+  .o-grid-row {
+    padding-top: 42px;
+  }
 }
 
 .instruction {
@@ -750,7 +749,7 @@ div.o-footer__brand {
 }
 
 @include oGridRespondTo(M) {
-  .intro-overlay {
+  .intro-overlay .o-grid-row {
     padding-top: 56px;
   }
 }

@@ -22,9 +22,9 @@ function showEntries(array) {
   // });
 
   // Add gradient if necessary
-  const container = div.children[0].children[0];
-  const text = container.children[0];
-  const containerHeight = container.getBoundingClientRect().height;
+  const pitchContainer = div.children[0].children[0];
+  const text = pitchContainer.children[0];
+  const containerHeight = pitchContainer.getBoundingClientRect().height;
   const textHeight = text.getBoundingClientRect().height - 40;
   const tellMeMore = document.querySelector('.expand-button');
 

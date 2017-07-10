@@ -19,6 +19,6 @@ function show_comments() {
   });
 }
 
-queue('https://origami-build.ft.com/v2/bundles/js?export=oComments&modules=o-comments@^3.1.0&autoinit=0', function(){
+queue('https://www.ft.com/__origami/service/build/v2/bundles/js?export=oComments&modules=o-comments@^3.1.0&autoinit=0', function(){
   setTimeout(show_comments, 1000);
 }, true);

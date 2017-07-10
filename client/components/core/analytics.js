@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-queue('https://origami-build.ft.com/v2/bundles/js?modules=o-tracking&export=oTracking&autoinit=0', function () {
+queue('https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-tracking&export=oTracking&autoinit=0', function () {
 
   if (!window.oTracking) {
     throw new Error('Could not load oTracking');

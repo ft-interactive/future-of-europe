@@ -14,7 +14,7 @@ dependencies:
     - sudo apt-get update
     - sudo apt-get install -y libstdc++-4.9-dev
     - pwd
-    - curl -L -o config/fob.json http://bertha.ig.ft.com/view/publish/gss/1w1z0nobFW65da6HqiKne6Se2kvI7HD5K7-W0BPrEkRw/data
+    - curl -L -o config/fob.json http://bertha.ig.ft.com/view/publish/gss/1kXR3_KlSJOyHdSRvRfMFRVSyUDXba5C94HW-t3FSN3U/data
 
 test:
   post:

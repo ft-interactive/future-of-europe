@@ -5,13 +5,13 @@ export default () => ({ // eslint-disable-line
 
   // canonical URL of the published page
   // https://ig.ft.com/sites/future-of-britain get filled in by the ./configure script
-  url: 'https://ig.ft.com/future-of-britain/',
+  url: 'https://ig.ft.com/future-of-europe/',
 
   // To set an exact publish date do this:
   //       new Date('2016-05-17T17:11:22Z')
   // publishedDate: new Date(),
 
-  headline: 'A plan for Britain:',
+  headline: 'A plan for Europe',
 
   // summary === standfirst (Summary is what the content API calls it)
   summary: '',
@@ -42,7 +42,7 @@ export default () => ({ // eslint-disable-line
   // ],
 
   // Appears in the HTML <title>
-  title: 'A plan for Britain',
+  title: 'A plan for Europe',
 
   // meta data
   description: 'What is the best relationship for the UK and the EU? How should the UK deal with immigration? FT readers share ideas for Britain post-Brexit.',
@@ -63,7 +63,7 @@ export default () => ({ // eslint-disable-line
   // General social
   socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=1200&fit=cover&format=auto&quality=high',
   socialHeadline: 'Browse our collection of reader ideas for guiding Britain through Brexit',
-  socialSummary: 'We asked you to brainstorm solutions for the future of Britain. Here are some of the most compelling.',
+  socialSummary: 'We asked you to brainst orm solutions for the future of Britain. Here are some of the most compelling.',
 
   // TWITTER
   twitterImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=1024&fit=cover&format=auto&quality=high',

@@ -147,7 +147,7 @@ body, .o-header__row, main {
 
 
 h1.o-typography-heading1 {
-  color: #EB3330;
+  color: #F7CA18;
   font-size: 38px;
   line-height: 41px;
   margin: 15px auto 0;
@@ -190,7 +190,7 @@ div.pitch-container.end{
   display: block;
   position: relative;
   margin: 0 0 30px;
-  color: #808088;
+  color: #F7CA18;
   border: none;
 }
 
@@ -225,9 +225,13 @@ div.pitch-container.end{
   color: #ECECEF;
 }
 
+.random-button {
+  color: #191a32;
+}
+
 
 .like-button {
-  border: 1px solid #EB3330;
+  border: 1px solid #F7CA18;
   background-color: #191A32;
 }
 
@@ -240,7 +244,7 @@ div.pitch-container.end{
 
 .random-button, .start-button {
   position: relative;
-  background: #EB3330;
+  background: #F7CA18;
   border: none;
   z-index: 1000;
   margin: 30px 0 20px 0 !important;
@@ -302,7 +306,7 @@ div.pitch-container.end{
   margin: 11% auto 0;
   text-align: center;
   display: block;
-  background-color: #EB3330;
+  background-color: #F7CA18;
   height: 40px;
   width: 238px;
   border-radius: 4px;
@@ -478,7 +482,7 @@ div.o-footer__brand {
 
 @media only screen and (min-width: 740px) {
   body {
-    background: url('future-of-britain-illo__generator.svg') #191a32;
+    background: url('future-of-EUROPE1.svg') #191a32;
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -695,7 +699,7 @@ div.o-footer__brand {
     }
     > .name {
       font: normal 20px/27px MetricWeb, sans-serif;
-      color: #eb3330;
+      color: #F7CA18;
     }
     > .title {
       font: normal 20px/20px MetricWeb, sans-serif;

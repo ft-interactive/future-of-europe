@@ -1,7 +1,7 @@
 export default () => ({ // eslint-disable-line
 
   // link file UUID
-  id: '34454f76-8585-11e6-8897-2359a58ac7a5',
+  id: '733a2208-c9f2-11e7-ab18-7a9fb7d6163e',
 
   // canonical URL of the published page
   // https://ig.ft.com/sites/future-of-britain get filled in by the ./configure script
@@ -14,7 +14,7 @@ export default () => ({ // eslint-disable-line
   headline: 'A plan for Europe',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: '',
+  summary: 'We asked students to share their ideas for the future of Europe. Here are some of the most compelling.',
 
   // topic: {
   //   name: 'Starter Kit',
@@ -27,9 +27,9 @@ export default () => ({ // eslint-disable-line
   // },
 
   mainImage: {
-    title: 'Readers\' ideas for guiding Britain through Brexit',
+    title: 'Students\' ideas for the future of Europe',
     description: '',
-    url: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=2048&fit=cover&format=auto&quality=high',
+    url: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A5f70a2ae-cba2-11e7-ab18-7a9fb7d6163e?source=ig',
     width: 2048, // ensure correct width
     height: 1152, // ensure correct height
   },
@@ -42,10 +42,10 @@ export default () => ({ // eslint-disable-line
   // ],
 
   // Appears in the HTML <title>
-  title: 'A plan for Europe',
+  title: 'Student ideas for the Future of Europe',
 
   // meta data
-  description: 'What is the best relationship for the UK and the EU? How should the UK deal with immigration? FT readers share ideas for Britain post-Brexit.',
+  description: 'We ask students at six universities across Europe to imagine its future. Here are the finalists.',
 
   /*
   TODO: Select Twitter card type -
@@ -61,19 +61,19 @@ export default () => ({ // eslint-disable-line
         optional social meta data?
   */
   // General social
-  socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=1200&fit=cover&format=auto&quality=high',
-  socialHeadline: 'Browse our collection of reader ideas for guiding Britain through Brexit',
-  socialSummary: 'We asked you to brainst orm solutions for the future of Britain. Here are some of the most compelling.',
+  socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A5f70a2ae-cba2-11e7-ab18-7a9fb7d6163e?source=ig&width=1200&fit=cover&format=auto&quality=high',
+  socialHeadline: 'Browse our collection of student ideas for the Future of Europe',
+  socialSummary: 'We asked students to share their ideas for the future of Europe. Here are some of the most compelling.',
 
   // TWITTER
-  twitterImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=1024&fit=cover&format=auto&quality=high',
+  twitterImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A5f70a2ae-cba2-11e7-ab18-7a9fb7d6163e?source=ig&width=1024&fit=cover&format=auto&quality=high',
   twitterCreator: '@FT',
-  tweetText: 'We asked you to brainstorm solutions for the future of Britain. Here are some of the most compelling',
-  twitterHeadline: 'Browse your ideas for guiding Britain through Brexit',
+  tweetText: 'We asked students to share their ideas for the future of Europe. Here are some of the most compelling.',
+  twitterHeadline: 'Browse our collection of student ideas for the Future of Europe',
 
   // FACEBOOK
-  facebookImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A895ff9b4-9554-11e6-a1dc-bdf38d484582?url=ftcms%253A895ff9b4-9554-11e6-a1dc-bdf38d484582&source=ig&width=1200&fit=cover&format=auto&quality=high',
-  facebookHeadline: 'Browse our collection of reader ideas for guiding Britain through Brexit',
+  facebookImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A5f70a2ae-cba2-11e7-ab18-7a9fb7d6163e?source=ig&width=1200&fit=cover&format=auto&quality=high',
+  facebookHeadline: 'Browse our collection of student ideas for the Future of Europe',
 
   tracking: {
 

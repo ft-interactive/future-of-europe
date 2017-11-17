@@ -105,7 +105,7 @@ function showRandom(startIndex) {
     randomButton.disabled = false;
   } else {
     // Change the random button on the last pitch
-    document.querySelector('.top-level-pitch').innerHTML = '<div class="pitch-wrapper"><div class="pitch-container end"><span class="pitch">You\'ve seen all the ideas.</span><div class="submit-button end"><a href="https://www.ft.com/futureofeurope/" target="_blank">Read more from this series</a></div><div class="again"><a href="https://ig.ft.com/future-of-europe/">Show me again</a></div></div></div></div>';
+    document.querySelector('.top-level-pitch').innerHTML = '<div class="pitch-wrapper"><div class="pitch-container end"><span class="pitch">You have seen all the ideas.</span><div class="submit-button end"><a href="https://www.ft.com/futureofeurope/" target="_blank">Read more from this series</a></div><div class="again"><a href="https://ig.ft.com/future-of-europe/">Show me again</a></div></div></div></div>';
 
     document.querySelector('.button-container').innerHTML = '';
   }
@@ -173,7 +173,7 @@ likeButton.addEventListener('click', () => {
 });
 
 tweetButton.addEventListener('click', () => {
-  window.location.href = `https://twitter.com/intent/tweet?text=Here%27s%20a%20good%20idea%20from%20the%20%40FT%27s%20collection%20of%20reader%20solutions%20for%20the%20future%20of%20Britain%3A&url=https://ig.ft.com/future-of-britain/%23${tweetButton.value}`;
+  window.location.href = `https://twitter.com/intent/tweet?text=Here%27s%20a%20good%20idea%20from%20the%20%40FT%27s%20collection%20of%20student%20proposals%20for%20the%20future%20of%20Europe%3A&url=https://ig.ft.com/future-of-europe/%23${tweetButton.value}`;
 
   window.ga('send', 'event', 'fob-tweets', tweetButton.value);
 });

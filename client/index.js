@@ -47,19 +47,42 @@ function showEntries(array) {
   }
 }
 
-function getRandomIndex(min, max) {
-  return Math.floor(Math.random() * ((max - min) + 1)) + min;
-}
+// function getRandomIndex(min, max) {
+//   return Math.floor(Math.random() * ((max - min) + 1)) + min;
+// }
 
-function showRandom() {
+function showRandom(startIndex) {
   const array = [];
+  const viewedMax = viewed.length ? viewed.reduce((a, b) => Math.max(a, b)) : null;
+  const viewedMin = viewed.length ? viewed.reduce((a, b) => Math.min(a, b)) : null;
+  const viewedLast = startIndex || viewed[viewed.length - 1];
 
-  array.push(getRandomIndex(1, pitchCount));
+  console.log(array, viewed);
+
+  if (!viewed.length) {
+    // console.log('start');
+
+    array.push(1);
+  } else if (viewedLast === 1) {
+    array.push(2);
+  } else if (viewedMax > 1 && viewedMax < 7 && viewedMin === viewedMax) {
+    // console.log('equal', viewedMax);
+
+    array.push(1);
+  } else if (viewedMax < 7) {
+    // console.log('mid', viewedMax, viewedMin, viewedLast);
+
+    array.push(viewedLast + 1);
+  } else if (viewedMax === 7) {
+    // console.log('end');
+
+    viewed.push(1, 2, 3, 4, 5, 6);
+  }
 
   if (viewed.indexOf(array[0]) > -1 && viewed.length < pitchCount) {
     console.log(`${array[0]} has been viewed, re-randomising`);
 
-    showRandom();
+    showRandom(array[0]);
   } else if (viewed.length < pitchCount) {
     viewed.forEach(n => {
       const div = document.querySelector(`div[data-index="${n}"]`);
@@ -205,6 +228,7 @@ if (hash) {
 
     if (Number.isInteger(int)) {
       hashNumbers.push(int);
+
       viewed.push(int);
     } else {
       console.log(`${item} is not a number, randomising`);

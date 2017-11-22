@@ -65,18 +65,18 @@ function showRandom(startIndex) {
     array.push(1);
   } else if (viewedLast === 1) {
     array.push(2);
-  } else if (viewedMax > 1 && viewedMax < 7 && viewedMin === viewedMax) {
+  } else if (viewedMax > 1 && viewedMax < pitchCount && viewedMin === viewedMax) {
     // console.log('equal', viewedMax);
 
     array.push(1);
-  } else if (viewedMax < 7) {
+  } else if (viewedMax < pitchCount) {
     // console.log('mid', viewedMax, viewedMin, viewedLast);
 
     array.push(viewedLast + 1);
-  } else if (viewedMax === 7) {
+  } else if (viewedMax === pitchCount) {
     // console.log('end');
 
-    viewed.push(1, 2, 3, 4, 5, 6);
+    viewed.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
   }
 
   if (viewed.indexOf(array[0]) > -1 && viewed.length < pitchCount) {

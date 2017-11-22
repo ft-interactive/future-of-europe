@@ -23,6 +23,7 @@
     "browserify": "^13.1.0",
     "d3-time-format": "^2.0.2",
     "debowerify": "^1.5.0",
+    "ft-graphics-deploy": "^2.1.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-data": "^1.2.1",
@@ -76,8 +77,7 @@
   "scripts": {
     "build": "gulp",
     "clean": "rm -rf dist",
-    "deploy": "env $([[ -f .env ]] && cat .env) babel-node ./tasks/deploy.js",
-    "deploy:confirm": "env $([[ -f .env ]] && cat .env) babel-node ./tasks/deploy.js --confirm",
+    "deploy": "ft-graphics-deploy --assets-prefix=https://ig.ft.com/v2/__assets/",
     "lint": "eslint --no-eslintrc --config=.eslintrc-ci.yml .",
     "postinstall": "bower install",
     "prebuild": "npm run clean",

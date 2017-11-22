@@ -76,7 +76,10 @@ function showRandom(startIndex) {
   } else if (viewedMax === pitchCount) {
     // console.log('end');
 
-    viewed.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    const range = (lower, upper) =>
+      [...Array(upper - lower)].map((el, i) => Number(lower + i));
+
+    range(1, pitchCount).forEach(r => viewed.push(r));
   }
 
   if (viewed.indexOf(array[0]) > -1 && viewed.length < pitchCount) {
